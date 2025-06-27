@@ -1,3160 +1,383 @@
 
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Great Faith Old Students - Alumni Network</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Great Faith Alumni - Under Maintenance</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 
-
-     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script> <!-- ADD THIS LINE -->
-    
-
-  <script>
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyA4Ua5B_poQIspyDTfbFfpwiiwgKwHMgvc",
-      authDomain: "great-faith-alumni.firebaseapp.com",
-      databaseURL: "https://great-faith-alumni-default-rtdb.firebaseio.com/",
-      projectId: "great-faith-alumni",
-      storageBucket: "great-faith-alumni.appspot.com",
-      messagingSenderId: "706725583190",
-      appId: "1:706725583190:web:a5e9d120eed84bf6029ef7",
-      measurementId: "G-YX1QSG3KYG"
-    };
-
-    // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-    const auth = firebase.auth(); // ADD THIS LINE
-    
-  </script>
+  <!-- SEO and Social Sharing -->
+  <meta name="description" content="The official alumni site of Great Faith - under maintenance but coming back soon!" />
+  <meta property="og:title" content="Great Faith Alumni - Coming Soon" />
+  <meta property="og:description" content="We're working on something great for our alumni community. Stay connected." />
+  <meta property="og:image" content="great_faith-removebg-preview.png" />
 
   <style>
-    /* Dark theme styles */
-    .dark {
-      --tw-bg-opacity: 1;
-      background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-      color: rgb(249 250 251);
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     
-    .dark .bg-white {
-      --tw-bg-opacity: 1;
-      background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-    }
-    
-    .dark .text-gray-900 {
-      --tw-text-opacity: 1;
-      color: rgb(249 250 251 / var(--tw-text-opacity));
-    }
-    
-    .dark .text-gray-600 {
-      --tw-text-opacity: 1;
-      color: rgb(209 213 219 / var(--tw-text-opacity));
-    }
-    
-    .dark .text-gray-700 {
-      --tw-text-opacity: 1;
-      color: rgb(209 213 219 / var(--tw-text-opacity));
-    }
-    
-    .dark .border-gray-300 {
-      --tw-border-opacity: 1;
-      border-color: rgb(75 85 99 / var(--tw-border-opacity));
-    }
-    
-    .dark input, .dark select, .dark textarea {
-      background-color: rgb(75 85 99);
-      color: rgb(249 250 251);
-    }
-    
-    .dark .admin-table th {
-      background-color: #374151;
-      color: #f9fafb;
+    body {
+      font-family: 'Inter', sans-serif;
     }
 
-    .dark .admin-table td {
-      border-color: #4b5563;
-      color: #e5e7eb;
-    }
-    
     .gradient-bg {
-      background: linear-gradient(135deg, #2d5016 0%, #4a7c23 50%, #6ba52c 100%);
-    }
-    
-    .card-hover {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .card-hover:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    }
-    
-    .animate-float {
-      animation: float 6s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    
-    .animate-pulse-soft {
-      animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
-    
-    @keyframes pulse-soft {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.8; }
+      background:  #2e7d32;
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
     }
 
-    .admin-table {
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .logo-glow {
+      filter: drop-shadow(0 0 20px rgba(253, 224, 71, 0.5));
+      animation: logoFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes logoFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .pulse-ring {
+      animation: pulseRing 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    }
+
+    @keyframes pulseRing {
+      0% { transform: scale(0.33); }
+      80%, 100% { opacity: 0; }
+    }
+
+    .countdown-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .floating-elements {
+      position: absolute;
       width: 100%;
-      border-collapse: collapse;
+      height: 100%;
+    
+      pointer-events: none;
     }
 
-    .admin-table th,
-    .admin-table td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #e5e7eb;
+    .floating-element {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: float linear infinite;
     }
 
-    .admin-table th {
-      background-color: #f9fafb;
-      font-weight: 600;
-      color: #111827;
-    }
-
-    .admin-table td {
-      color: #374151;
-    }
-
-    /* High contrast text fixes */
-    .nav-tab.active {
-      color: #059669 !important;
-      border-bottom-color: #fbbf24 !important;
-    }
-
-    .nav-tab:hover {
-      color: #059669 !important;
-    }
-
-    .dark .nav-tab.active {
-      color: #34d399 !important;
-    }
-
-    .dark .nav-tab:hover {
-      color: #34d399 !important;
-    }
-
-    /* Improved contrast for buttons and links */
-    .text-green-600 {
-      color: #059669 !important;
-    }
-
-    .dark .text-green-600 {
-      color: #34d399 !important;
-    }
-
-    /* Better mobile responsiveness */
-    @media (max-width: 640px) {
-      .hero-text {
-        font-size: 2rem;
-        line-height: 2.5rem;
+    @keyframes float {
+      0% { 
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
       }
-      
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { 
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
       }
     }
 
-    @media (max-width: 768px) {
-      .modal-content {
-        margin: 1rem;
-        max-height: 90vh;
-        overflow-y: auto;
-      }
-      
-      .admin-table-container {
-        overflow-x: auto;
-      }
-      
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
+    .input-glow:focus {
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.3), 0 0 20px rgba(34, 197, 94, 0.2);
     }
 
-    /* Custom confirmation dialog style */
-.confirm-dialog {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  animation: fadeIn 0.3s ease-out;
-}
+    .btn-hover {
+      transition: all 0.3s ease;
+    }
 
-.confirm-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
+    .btn-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 
-<body class="bg-gray-50 font-inter transition-colors duration-300">
-  <!-- Header -->
-  <header class="gradient-bg shadow-2xl sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 sm:h-20">
-        <div class="flex items-center space-x-2 sm:space-x-4">
-          <div class="bg-white p-1 sm:p-2 rounded-xl shadow-lg">
-            <img src="great_faith-removebg-preview.png" alt="Great Faith Logo" class="w-8 h-8 sm:w-12 sm:h-12 object-contain" />
-          </div>
-          <div>
-            <h1 class="text-lg sm:text-2xl font-bold text-white">Great Faith Old Students</h1>
-            <p class="text-green-100 text-xs sm:text-sm">Alumni Network</p>
-          </div>
-        </div>
-        <div class="flex items-center space-x-2 sm:space-x-4">
-            <!--
-          <button onclick="showAdminLogin()" 
-                  class="bg-yellow-400 hover:bg-yellow-300 text-green-800 font-semibold py-1 px-2 sm:py-2 sm:px-4 rounded-xl transition-all duration-300 hover:scale-105 text-xs sm:text-sm">
-            🔐 Admin
-          </button>
-        -->
-          <button onclick="toggleTheme()" id="themeToggle" 
-                  class="bg-white/20 hover:bg-white/30 text-white p-2 sm:p-3 rounded-full transition-all duration-300 hover:scale-110">
-            🌙
-          </button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="bg-white shadow-lg sticky top-16 sm:top-20 z-40" id="mainNav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex overflow-x-auto">
-        <button class="nav-tab active whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showSection('home')">
-          🏠 Home
-        </button>
-        <button class="nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showSection('registration')">
-          📝 Register
-        </button>
-        <button class="nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showSection('gallery')">
-          🖼️ Gallery
-        </button>
-        <button class="nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showSection('birthdays')">
-          🎂 Birthdays
-        </button>
-        <button class="nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showSection('announcements')">
-          📢 Announcements
-        </button>
-        <button class="nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showSection('messages')">
-          💬 Messages
-        </button>
-        <button class="nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showSection('dues')">
-          💰 Dues
-        </button>
-        <button class="nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showSection('achievements')">
-          🏆 Achievements
-        </button>
-      </div>
-    </div>
-  </nav>
+<body class="gradient-bg min-h-screen relative overflow-x-hidden overflow-y-auto">
+  <!-- Floating Background Elements -->
+  <div class="floating-elements" id="floatingElements"></div>
 
   <!-- Main Content Container -->
-  <div id="mainContent" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
-    <!-- Home Section -->
-    <section id="home" class="section active">
-      <!-- Hero Section -->
-      <div class="relative overflow-hidden bg-gradient-to-br from-green-600 via-green-700 to-green-800 rounded-3xl shadow-2xl mb-8 sm:mb-16">
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative px-4 py-8 sm:px-8 sm:py-16 lg:px-16 lg:py-24 text-center">
-          <div class="animate-float">
-            <h1 class="hero-text text-2xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-              Welcome Back, <span class="text-yellow-300">Alumni!</span>
-            </h1>
-            <p class="text-sm sm:text-xl lg:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
-              Join our vibrant community of Great Faith graduates. Connect, share, and grow together in our comprehensive alumni network.
-            </p>
-          </div>
-          <div class="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button onclick="showSection('registration')" 
-                    class="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-300 text-green-800 font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
-              Join Our Network
-            </button>
-            <button onclick="showSection('gallery')" 
-                    class="w-full sm:w-auto bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-full transition-all duration-300 border-2 border-white/30">
-              Explore Gallery
-            </button>
-          </div>
-        </div>
+  <div class="relative z-10 text-center text-white px-6 max-w-2xl mx-auto">
+    
+    <!-- Logo Section -->
+    <div class="mb-8">
+      <div class="relative inline-block">
+        <div class="absolute inset-0 rounded-full bg-yellow-400 opacity-20 pulse-ring"></div>
+        <img src="great_faith-removebg-preview.png" alt="Great Faith Alumni Logo" 
+             class="w-24 h-24 mx-auto logo-glow relative z-10" />
       </div>
+      <h1 class="text-4xl md:text-5xl font-bold mt-6 mb-2 text-yellow-400 text-shadow">
+        GREAT FAITH ALUMNI
+      </h1>
+      <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-300 mx-auto rounded-full"></div>
+    </div>
 
-      <!-- Feature Cards -->
-      <div class="card-grid grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-        <div class="card-hover bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-gray-100">
-          <div class="flex items-center mb-4 sm:mb-6">
-            <div class="bg-gradient-to-br from-yellow-400 to-yellow-500 p-3 sm:p-4 rounded-2xl shadow-lg">
-              <span class="text-xl sm:text-2xl">🎓</span>
-            </div>
-            <h3 class="ml-3 sm:ml-4 text-lg sm:text-2xl font-bold text-gray-900">Alumni Network</h3>
-          </div>
-          <p class="text-gray-600 text-sm sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Connect with fellow graduates, share your journey, and build lasting professional relationships in our growing community of Great Faith alumni.
-          </p>
-          <button onclick="showSection('registration')" 
-                  class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-3 rounded-xl transition-all duration-300 hover:scale-105">
-            Join Now
-          </button>
-        </div>
+    <!-- Hero Message -->
+    <div class="mb-12">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4 text-shadow">
+        Something Amazing is Coming
+      </h2>
+      <p class="text-lg md:text-xl text-green-50 max-w-lg mx-auto leading-relaxed">
+        We're building an enhanced experience for our alumni community. 
+        Your connection to Great Faith is about to get even stronger.
+      </p>
+    </div>
 
-        <div class="card-hover bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-gray-100">
-          <div class="flex items-center mb-4 sm:mb-6">
-            <div class="bg-gradient-to-br from-yellow-400 to-yellow-500 p-3 sm:p-4 rounded-2xl shadow-lg">
-              <span class="text-xl sm:text-2xl">💰</span>
-            </div>
-            <h3 class="ml-3 sm:ml-4 text-lg sm:text-2xl font-bold text-gray-900">Dues Management</h3>
-          </div>
-          <p class="text-gray-600 text-sm sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Easily manage your alumni dues with our secure payment tracking system. Submit payments and keep track of your contributions to the network.
-          </p>
-          <button onclick="showSection('dues')" 
-                  class="w-full bg-yellow-500 hover:bg-yellow-600 text-green-800 font-semibold py-2 sm:py-3 rounded-xl transition-all duration-300 hover:scale-105">
-            Pay Dues
-          </button>
-        </div>
 
-        <div class="card-hover bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-gray-100">
-          <div class="flex items-center mb-4 sm:mb-6">
-            <div class="bg-gradient-to-br from-yellow-400 to-yellow-500 p-3 sm:p-4 rounded-2xl shadow-lg">
-              <span class="text-xl sm:text-2xl">🖼️</span>
-            </div>
-            <h3 class="ml-3 sm:ml-4 text-lg sm:text-2xl font-bold text-gray-900">Photo Gallery</h3>
-          </div>
-          <p class="text-gray-600 text-sm sm:text-lg leading-relaxed mb-4 sm:mb-6">
-            Browse through memories and moments shared by our alumni family. Upload your own photos to contribute to our growing gallery.
-          </p>
-          <button onclick="showSection('gallery')" 
-                  class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-3 rounded-xl transition-all duration-300 hover:scale-105">
-            View Gallery
-          </button>
-        </div>
-      </div>
-
-      <!-- Stats Section -->
-      <div class="mt-12 sm:mt-16 bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-6 sm:p-8 text-white">
-        <div class="stats-grid grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
-          <div class="animate-pulse-soft">
-            <div class="text-2xl sm:text-4xl font-bold" id="totalAlumni">0</div>
-            <div class="text-green-100 text-xs sm:text-base">Alumni Registered</div>
-          </div>
-          <div class="animate-pulse-soft" style="animation-delay: 0.5s;">
-            <div class="text-2xl sm:text-4xl font-bold" id="totalPhotos">0</div>
-            <div class="text-green-100 text-xs sm:text-base">Photos Shared</div>
-          </div>
-          <div class="animate-pulse-soft" style="animation-delay: 1s;">
-            <div class="text-2xl sm:text-4xl font-bold" id="totalMessages">0</div>
-            <div class="text-green-100 text-xs sm:text-base">Messages Posted</div>
-          </div>
-          <div class="animate-pulse-soft" style="animation-delay: 1.5s;">
-            <div class="text-2xl sm:text-4xl font-bold">24/7</div>
-            <div class="text-green-100 text-xs sm:text-base">Community Support</div>
-          </div>
-        </div>
-      </div>
-    </section>    <!-- Registration Section -->
-    <section id="registration" class="section hidden">
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <div class="bg-gradient-to-r from-green-600 to-green-700 px-6 py-8 sm:px-8 sm:py-12 text-center">
-            <div class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-yellow-400 rounded-full mb-4">
-              <span class="text-xl sm:text-2xl">📝</span>
-            </div>
-            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Alumni Registration</h2>
-            <p class="text-green-100">Join our vibrant community today</p>
-          </div>
-          
-          <div class="p-6 sm:p-8">
-            <div id="registrationAlert" class="hidden mb-6"></div>
-            
-            <form id="registrationForm" class="space-y-4 sm:space-y-6">
-              <div class="form-grid grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                  <label for="fullName" class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
-                  <input type="text" id="fullName" name="fullName" required 
-                         class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
-                </div>
-                
-                <div>
-                  <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-                  <input type="email" id="email" name="email" required 
-                         class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
-                </div>
-                
-                <div>
-                  <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
-                  <input type="tel" id="phone" name="phone" required 
-                         class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
-                </div>
-                
-                <div>
-                  <label for="yearOfCompletion" class="block text-sm font-semibold text-gray-700 mb-2">Year of Completion *</label>
-                  <select id="yearOfCompletion" name="yearOfCompletion" required 
-                          class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
-                    <option value="">Select Year</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div>
-                <label for="currentLocation" class="block text-sm font-semibold text-gray-700 mb-2">Current Location *</label>
-                <input type="text" id="currentLocation" name="currentLocation" required 
-                       class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
-              </div>
-              
-              <div class="form-grid grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                  <label for="occupation" class="block text-sm font-semibold text-gray-700 mb-2">Occupation / Role</label>
-                  <input type="text" id="occupation" name="occupation" 
-                         class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
-                </div>
-                
-                <div>
-                  <label for="company" class="block text-sm font-semibold text-gray-700 mb-2">Company / Institution</label>
-                  <input type="text" id="company" name="company" 
-                         class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors">
-                </div>
-              </div>
-              
-              <div>
-                <label for="achievements" class="block text-sm font-semibold text-gray-700 mb-2">Achievements / Highlights</label>
-                <textarea id="achievements" name="achievements" rows="4" placeholder="Share your proudest achievements..." 
-                          class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors resize-none"></textarea>
-              </div>
-              
-              <div>
-                <label for="groupMessage" class="block text-sm font-semibold text-gray-700 mb-2">Message to the Group</label>
-                <textarea id="groupMessage" name="groupMessage" rows="4" placeholder="What would you like to say to your fellow alumni?" 
-                          class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors resize-none"></textarea>
-              </div>
-              
-              <div class="form-grid grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                  <label for="profilePhoto" class="block text-sm font-semibold text-gray-700 mb-2">Upload Your Photo</label>
-                  <div class="relative">
-                    <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" class="hidden">
-                    <label for="profilePhoto" class="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer hover:border-green-500 transition-colors">
-                      <span class="text-gray-600">📷 Choose Photo</span>
-                    </label>
-                  </div>
-                </div>
-
-                <div>
-                  <label for="resumeUpload" class="block text-sm font-semibold text-gray-700 mb-2">Upload Resume (Optional)</label>
-                  <div class="relative">
-                    <input type="file" id="resumeUpload" name="resumeUpload" accept=".pdf,.doc,.docx" class="hidden">
-                    <label for="resumeUpload" class="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer hover:border-green-500 transition-colors">
-                      <span class="text-gray-600">📄 Choose Resume</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              
-              <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
-                Join the Alumni Network
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section hidden">
-      <div class="text-center mb-8 sm:mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Alumni Photo Gallery</h2>
-        <p class="text-lg sm:text-xl text-gray-600">Memories and moments shared by our alumni family</p>
-      </div>
-      
-      <div class="mb-6 sm:mb-8 text-center">
-        <button onclick="showUploadPhotoModal()" 
-                class="bg-yellow-500 hover:bg-yellow-600 text-green-800 font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
-          📸 Upload Photo
-        </button>
-      </div>
-      
-      <div id="photoGallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-        <!-- Photos will be loaded here -->
-      </div>
-    </section>
-
-    <!-- Birthdays Section -->
-    <section id="birthdays" class="section hidden">
-      <div class="text-center mb-8 sm:mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Birthday Tracker & Wishes</h2>
-        <p class="text-lg sm:text-xl text-gray-600">Celebrate with your fellow alumni</p>
-      </div>
-      
-      <div class="mb-6 sm:mb-8 text-center">
-        <button onclick="showAddBirthdayModal()" 
-                class="bg-yellow-500 hover:bg-yellow-600 text-green-800 font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
-          🎉 Add Birthday
-        </button>
-      </div>
-      
-      <div id="birthdayList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        <!-- Birthdays will be loaded here -->
-      </div>
-    </section>
-
-    <!-- Announcements Section -->
-    <section id="announcements" class="section hidden">
-      <div class="text-center mb-8 sm:mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Announcements & Notices</h2>
-        <p class="text-lg sm:text-xl text-gray-600">Stay updated with the latest news</p>
-      </div>
-      
-      <div class="mb-6 sm:mb-8 text-center">
-        <button onclick="showPostMessageModal()" 
-                class="bg-yellow-500 hover:bg-yellow-600 text-green-800 font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
-          📝 Post Announcement
-        </button>
-      </div>
-      
-      <div id="announcementsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        <!-- Announcements will be loaded here -->
-      </div>
-    </section>
-
-    <!-- Messages Section -->
-    <section id="messages" class="section hidden">
-      <div class="text-center mb-8 sm:mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Alumni Messages</h2>
-        <p class="text-lg sm:text-xl text-gray-600">Connect and communicate with fellow alumni</p>
-      </div>
-      
-      <div class="mb-6 sm:mb-8 text-center">
-        <button onclick="showPostMessageModal()" 
-                class="bg-yellow-500 hover:bg-yellow-600 text-green-800 font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
-          📝 Post Message
-        </button>
-      </div>
-      
-      <div id="alumniMessagesList" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-        <!-- Alumni messages will be loaded here -->
-      </div>
-    </section>    <!-- Dues Section -->
-    <section id="dues" class="section hidden">
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 px-6 py-8 sm:px-8 sm:py-12 text-center">
-            <div class="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-green-600 rounded-full mb-4">
-              <span class="text-xl sm:text-2xl text-white">💰</span>
-            </div>
-            <h2 class="text-2xl sm:text-3xl font-bold text-green-800 mb-2">Alumni Dues Payment</h2>
-            <p class="text-green-700">Secure and easy payment submission</p>
-          </div>
-          
-          <div class="p-6 sm:p-8">
-            <form id="duesForm" class="space-y-4 sm:space-y-6">
-              <div class="form-grid grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                  <label for="duesFullName" class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
-                  <input type="text" id="duesFullName" name="fullName" required 
-                         class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-                </div>
-                
-                <div>
-                  <label for="duesMemberIdEmail" class="block text-sm font-semibold text-gray-700 mb-2">Member ID or Email *</label>
-                  <input type="text" id="duesMemberIdEmail" name="memberIdEmail" required 
-                         class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-                </div>
-                
-                <div>
-                  <label for="yearGroup" class="block text-sm font-semibold text-gray-700 mb-2">Year Group *</label>
-                  <select id="yearGroup" name="yearGroup" required 
-                          class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-                    <option value="">Select Year Group</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label for="amountPaid" class="block text-sm font-semibold text-gray-700 mb-2">Amount Paid (₵) *</label>
-                  <select id="amountPaid" name="amountPaid" required 
-                          class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-                    <option value="">Select Amount</option>
-                    <option value="50">₵10 - Monthly Dues</option>
-                    <option value="150">₵30 - Quarterly Dues</option>
-                  <option value="60">₵60 - Half-Year Dues</option>
-                    <option value="500">₵120 - Annual Dues</option>
-                    <option value="custom">Custom Amount</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div id="customAmountGroup" class="hidden">
-                <label for="customAmount" class="block text-sm font-semibold text-gray-700 mb-2">Custom Amount (₵) *</label>
-                <input type="number" id="customAmount" name="customAmount" placeholder="Enter amount in Ghana Cedis" min="1" 
-                       class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-              </div>
-              
-              <div class="form-grid grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                  <label for="paymentMethod" class="block text-sm font-semibold text-gray-700 mb-2">Payment Method *</label>
-                  <select id="paymentMethod" name="paymentMethod" required 
-                          class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-                    <option value="">Select Payment Method</option>
-                    <option value="momo">Mobile Money (MTN/Vodafone/AirtelTigo)</option>
-                    <option value="bank_transfer">Bank Transfer</option>
-                    <option value="cash">Cash Payment</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label for="referenceId" class="block text-sm font-semibold text-gray-700 mb-2">Reference ID *</label>
-                  <input type="text" id="referenceId" name="referenceId" placeholder="Transaction ID, Reference Number, etc." required 
-                         class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-                </div>
-              </div>
-              
-              <div>
-                <label for="paymentMonth" class="block text-sm font-semibold text-gray-700 mb-2">Payment Month/Term *</label>
-                <input type="text" id="paymentMonth" name="paymentMonth" placeholder="e.g., January 2024" required 
-                       class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors">
-              </div>
-              
-              <div>
-                <label for="paymentNote" class="block text-sm font-semibold text-gray-700 mb-2">Note or Description (Optional)</label>
-                <textarea id="paymentNote" name="paymentNote" placeholder="Additional notes about this payment..." rows="3" 
-                          class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-colors resize-none"></textarea>
-              </div>
-              
-              <div>
-                <label for="paymentProof" class="block text-sm font-semibold text-gray-700 mb-2">Upload Proof of Payment *</label>
-                <div class="relative">
-                  <input type="file" id="paymentProof" name="paymentProof" accept="image/*,.pdf" required class="hidden">
-                  <label for="paymentProof" class="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer hover:border-yellow-500 transition-colors">
-                    <span class="text-gray-600">📄 Choose File</span>
-                  </label>
-                </div>
-              </div>
-              
-              <button type="submit" class="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-green-800 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
-                Submit for Approval
-              </button>
-            </form>
-            
-            <!-- Pending Status -->
-            <div id="pendingDuesStatus" class="hidden mt-6 sm:mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-              <div class="flex items-center">
-                <span class="text-2xl mr-3">⏳</span>
-                <div>
-                  <p class="font-semibold text-yellow-800">Awaiting Admin Approval...</p>
-                  <p class="text-yellow-700">Your dues submission has been sent to the admin for review. You will be notified once it's approved.</p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Dues History -->
-            <div class="mt-8 sm:mt-12">
-              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">📋 My Dues History</h3>
-              <div id="myDuesHistory" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <!-- User's dues history will be loaded here -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="section hidden">
-      <div class="text-center mb-8 sm:mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Alumni Achievements</h2>
-        <p class="text-lg sm:text-xl text-gray-600">Celebrating the success of our alumni</p>
-      </div>
-      
-      <div id="achievementsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        <!-- Achievements will be loaded here -->
-      </div>
-    </section>
-  </div>
-
-  <!-- Admin Panel -->
-  <div id="adminPanel" class="hidden min-h-screen bg-gray-50">
-    <!-- Admin Header -->
-    <div class="gradient-bg shadow-2xl">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 sm:h-20">
-          <div class="flex items-center space-x-2 sm:space-x-4">
-            <div class="bg-white p-1 sm:p-2 rounded-xl shadow-lg">
-              <span class="text-lg sm:text-2xl">🔐</span>
-            </div>
-            <div>
-              <h1 class="text-lg sm:text-2xl font-bold text-white">Admin Dashboard</h1>
-              <p class="text-green-100 text-xs sm:text-sm">Great Faith Alumni Network</p>
-            </div>
-          </div>
-          <div class="flex items-center space-x-2 sm:space-x-4">
-            <button onclick="exportData()" 
-                    class="bg-yellow-400 hover:bg-yellow-300 text-green-800 font-semibold py-1 px-2 sm:py-2 sm:px-4 rounded-xl transition-all duration-300 text-xs sm:text-sm">
-              📥 Export
-            </button>
-            <button onclick="showMainSite()" 
-                    class="bg-white/20 hover:bg-white/30 text-white font-semibold py-1 px-2 sm:py-2 sm:px-4 rounded-xl transition-all duration-300 text-xs sm:text-sm">
-              🏠 Back
-            </button>
-            <button onclick="adminLogout()" 
-                    class="bg-red-500 hover:bg-red-600 text-white font-semibold py-1 px-2 sm:py-2 sm:px-4 rounded-xl transition-all duration-300 text-xs sm:text-sm">
-              🚪 Logout
-            </button>
-          </div>
-        </div>
+    <!-- Countdown Timer -->
+    <div class="countdown-card rounded-2xl p-6 mb-8 mx-auto max-w-md">
+      <h3 class="text-lg font-medium mb-4 text-green-100">Launch Countdown</h3>
+      <div id="countdown" class="text-2xl md:text-3xl font-bold text-yellow-400">
+        Loading...
       </div>
     </div>
 
-    <!-- Admin Navigation -->
-    <nav class="bg-white shadow-lg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex overflow-x-auto">
-          <button class="admin-nav-tab active whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showAdminSection('alumni')">
-            👥 Alumni
-          </button>
-          <button class="admin-nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showAdminSection('pending-dues')">
-            ⏳ Pending Dues
-          </button>
-          <button class="admin-nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showAdminSection('approved-dues')">
-            ✅ Approved Dues
-          </button>
-          <button class="admin-nav-tab whitespace-nowrap px-3 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm font-semibold border-b-3 border-transparent hover:border-yellow-400 transition-colors" onclick="showAdminSection('analytics')">
-            📊 Analytics
-          </button>
-        </div>
-      </div>
-    </nav>
+   <!-- Contact Form -->
+<div class="glass-card rounded-2xl p-8 mb-8 max-w-md mx-auto">
+  <h3 class="text-xl font-semibold mb-6 text-green-50">Stay Connected</h3>
 
-    <!-- Admin Content -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-      <!-- Alumni Management Section -->
-      <div id="adminAlumniSection" class="admin-section">
-        <div class="bg-white rounded-3xl shadow-xl p-6 sm:p-8">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-            <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Alumni Management</h2>
-            <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
-              <input type="text" id="alumniSearchInput" placeholder="🔍 Search alumni..." 
-                     class="w-full sm:w-auto px-3 py-2 sm:px-4 sm:py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500"
-                     onkeyup="filterAlumniData()">
-              <span id="alumniCount" class="text-sm text-gray-600">0 alumni</span>
-            </div>
-          </div>
-          <div id="alumniTableContainer" class="admin-table-container overflow-x-auto">
-            <table class="admin-table w-full min-w-full">
-              <thead>
-                <tr>
-                  <th class="text-left">Name</th>
-                  <th class="text-left">Email</th>
-                  <th class="text-left">Phone</th>
-                  <th class="text-left">Year</th>
-                  <th class="text-left">Location</th>
-                  <th class="text-left">Occupation</th>
-                  <th class="text-left">Company</th>
-                  <th class="text-left">Joined</th>
-                  <th class="text-left">Actions</th>
-                </tr>
-              </thead>
-              <tbody id="alumniTableBody">
-                <!-- Alumni data will be populated here -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pending Dues Section -->
-      <div id="adminPendingDuesSection" class="admin-section hidden">
-        <div class="bg-white rounded-3xl shadow-xl p-6 sm:p-8">
-          <div class="flex justify-between items-center mb-6">
-            <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Pending Dues Submissions</h2>
-            <span id="pendingCount" class="text-sm text-gray-600">0 pending</span>
-          </div>
-          <div id="pendingDuesContainer" class="space-y-4 sm:space-y-6">
-            <!-- Pending dues will be populated here -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Approved Dues Section -->
-      <div id="adminApprovedDuesSection" class="admin-section hidden">
-        <div class="bg-white rounded-3xl shadow-xl p-6 sm:p-8">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-            <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Approved Dues Records</h2>
-            <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
-              <input type="text" id="approvedDuesSearchInput" placeholder="🔍 Search records..." 
-                     class="w-full sm:w-auto px-3 py-2 sm:px-4 sm:py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500"
-                     onkeyup="filterApprovedDues()">
-              <span id="approvedCount" class="text-sm text-gray-600">0 approved</span>
-            </div>
-          </div>
-          <div id="approvedDuesTableContainer" class="admin-table-container overflow-x-auto">
-            <table class="admin-table w-full min-w-full">
-              <thead>
-                <tr>
-                  <th class="text-left">Name</th>
-                  <th class="text-left">Amount</th>
-                  <th class="text-left">Method</th>
-                  <th class="text-left">Reference</th>
-                  <th class="text-left">Month/Term</th>
-                  <th class="text-left">Approved Date</th>
-                  <th class="text-left">Actions</th>
-                </tr>
-              </thead>
-              <tbody id="approvedDuesTableBody">
-                <!-- Approved dues will be populated here -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Analytics Section -->
-      <div id="adminAnalyticsSection" class="admin-section hidden">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
-          <div class="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
-            <div class="flex items-center">
-              <div class="bg-green-100 p-2 sm:p-3 rounded-full">
-                <span class="text-lg sm:text-2xl">👥</span>
-              </div>
-              <div class="ml-3 sm:ml-4">
-                <h3 class="text-sm sm:text-lg font-semibold text-gray-900">Total Alumni</h3>
-                <p class="text-2xl sm:text-3xl font-bold text-green-600" id="analyticsAlumniCount">0</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
-            <div class="flex items-center">
-              <div class="bg-yellow-100 p-2 sm:p-3 rounded-full">
-                <span class="text-lg sm:text-2xl">💰</span>
-              </div>
-              <div class="ml-3 sm:ml-4">
-                <h3 class="text-sm sm:text-lg font-semibold text-gray-900">Total Revenue</h3>
-                <p class="text-xl sm:text-3xl font-bold text-yellow-600" id="analyticsTotalRevenue">₵0</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
-            <div class="flex items-center">
-              <div class="bg-blue-100 p-2 sm:p-3 rounded-full">
-                <span class="text-lg sm:text-2xl">⏳</span>
-              </div>
-              <div class="ml-3 sm:ml-4">
-                <h3 class="text-sm sm:text-lg font-semibold text-gray-900">Pending Dues</h3>
-                <p class="text-2xl sm:text-3xl font-bold text-blue-600" id="analyticsPendingCount">0</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
-            <div class="flex items-center">
-              <div class="bg-purple-100 p-2 sm:p-3 rounded-full">
-                <span class="text-lg sm:text-2xl">📅</span>
-              </div>
-              <div class="ml-3 sm:ml-4">
-                <h3 class="text-sm sm:text-lg font-semibold text-gray-900">This Month</h3>
-                <p class="text-xl sm:text-3xl font-bold text-purple-600" id="analyticsThisMonth">₵0</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-3xl shadow-xl p-6 sm:p-8">
-          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Recent Activity</h3>
-          <div id="recentActivity" class="space-y-4">
-            <!-- Recent activity will be populated here -->
-          </div>
-        </div>
-      </div>
+  <form action="https://formspree.io/f/xnnvlngz" method="POST" class="space-y-4">
+    <!-- Email Field -->
+    <div>
+      <label for="email" class="block text-sm font-medium text-green-100 mb-2">
+        Email Address
+      </label>
+      <input 
+        type="email" 
+        name="email" 
+        id="email"
+        required 
+        placeholder="your.email@example.com"
+        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-green-200 input-glow focus:outline-none focus:border-green-400 transition-all"
+      />
     </div>
-  </div>  <!-- Footer -->
- <!-- Footer -->
-<!-- Footer -->
-<footer class="gradient-bg text-white py-8 sm:py-12 mt-16 sm:mt-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-      <!-- Leadership Contacts -->
-      <div class="col-span-2 md:col-span-4">
-        <h3 class="text-xl font-semibold mb-4 text-yellow-300 animate-fade-in">Executive Committee</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="bg-white/10 p-4 rounded-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-            <h4 class="font-medium">President</h4>
-            <p class="text-sm text-gray-200">To Be Elected</p>
-            <a href="tel:+1234567890" class="text-yellow-300 text-sm hover:underline">+1 234 567 890</a>
-          </div>
-          
-          <div class="bg-white/10 p-4 rounded-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-            <h4 class="font-medium">Vice President</h4>
-            <p class="text-sm text-gray-200">To Be Elected</p>
-            <a href="tel:+1234567891" class="text-yellow-300 text-sm hover:underline">+1 234 567 891</a>
-          </div>
-          
-          <div class="bg-white/10 p-4 rounded-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-            <h4 class="font-medium">Secretary</h4>
-            <p class="text-sm text-gray-200">To Be Elected</p>
-            <a href="tel:+1234567892" class="text-yellow-300 text-sm hover:underline">+1 234 567 892</a>
-          </div>
-          
-          <div class="bg-white/10 p-4 rounded-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-            <h4 class="font-medium">Financial</h4>
-            <p class="text-sm text-gray-200">To Be Elected</p>
-            <a href="tel:+1234567894" class="text-yellow-300 text-sm hover:underline">+1 234 567 894</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Quick Links -->
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-yellow-300 animate-fade-in">Quick Links</h3>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-yellow-300 transition-colors duration-200">Home</a></li>
-          <li><a href="#gallery" class="hover:text-yellow-300 transition-colors duration-200">Gallery</a></li>
-         
-         
-        </ul>
-      </div>
+    <!-- Message Field -->
+    <div>
+      <label for="message" class="block text-sm font-medium text-green-100 mb-2">
+        Message (Optional)
+      </label>
+      <textarea 
+        name="message"
+        id="message"
+        rows="3"
+        placeholder="Share your thoughts or questions..."
+        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-green-200 input-glow focus:outline-none focus:border-green-400 transition-all resize-none"
+      ></textarea>
+    </div>
 
-      <!-- School Information -->
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-yellow-300 animate-fade-in">Our School</h3>
-        <div class="space-y-2">
-          <a href="https://www.greatfaithschool.edu" target="_blank" class="flex items-center hover:text-yellow-300 transition-colors duration-200">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-            </svg>
-            School Website
-          </a>
-          <p class="text-sm">Great Faith Rockery School</p>
-          <p class="text-sm">Ahenema-Kokoben</p>
-          <p class="text-sm">edwinaduboateng2@gmail.com</p>
-        </div>
-      </div>
+    <!-- Submit Button -->
+    <button 
+      type="submit"
+      class="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-green-900 font-semibold py-3 px-6 rounded-lg btn-hover focus:outline-none focus:ring-4 focus:ring-yellow-400/30"
+    >
+      Keep Me Updated
+    </button>
+  </form>
+</div>
 
-      <!-- Developed By -->
-      <div>
-        <h3 class="text-xl font-semibold mb-4 text-yellow-300 animate-fade-in">About</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div id="success-message" class="hidden mt-4 p-3 bg-green-500/20 border border-green-400/30 rounded-lg text-green-100">
         <div class="flex items-center">
-          <span class="mr-2">Developed by</span>
-          <span class="text-yellow-300 font-medium">Edwin</span>
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          Thank you! We'll keep you updated on our progress.
         </div>
-        <p class="text-sm mt-4">© 2023 Great Faith Alumni Network</p>
-        <p class="text-xs mt-2 text-gray-300">Building connections that last a lifetime</p>
       </div>
     </div>
-  </div>
 
-  <!-- Animation Style -->
-  <style>
-    .animate-fade-in {
-      animation: fadeIn 0.5s ease-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</footer>
-
-
-
-  <!-- Modals -->
-  <!-- Admin Login Modal -->
-    <div id="adminLoginModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
-      <div class="modal-content bg-white rounded-3xl shadow-2xl p-6 sm:p-8 max-w-md w-full mx-4">
-        <div class="text-center mb-4 sm:mb-6">
-          <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-xl sm:text-2xl">🔐</span>
-          </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Admin Access</h2>
-          <p class="text-gray-600">Enter your admin credentials to access the dashboard</p> <!-- Changed text -->
+    <!-- Features Preview -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto">
+      <div class="glass-card rounded-xl p-4 text-center">
+        <div class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
         </div>
-        <form id="adminLoginForm" class="space-y-4">
-          <div>
-            <label for="adminEmail" class="block text-sm font-semibold text-gray-700 mb-2">Email</label> <!-- ADD THIS -->
-            <input type="email" id="adminEmail" required                                            
-                   class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500"> <!-- ADD THIS -->
-          </div>                                                                                     <!-- ADD THIS -->
-          <div>
-            <label for="adminPassword" class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
-            <input type="password" id="adminPassword" required
-                   class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500">
-          </div>
-          <div class="flex gap-4 pt-4">
-            <button type="submit" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-3 rounded-xl transition-colors">Login</button>
-            <button type="button" onclick="closeModal('adminLoginModal')" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-700 font-semibold py-2 sm:py-3 rounded-xl transition-colors">Cancel</button>
-          </div>
-        </form>
+        <h4 class="font-medium text-green-50">Alumni Network</h4>
+        <p class="text-sm text-green-200 mt-1">Connect with fellow graduates</p>
       </div>
-    </div>
-    
-
-  <!-- Success Modal -->
-  <div id="successModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
-    <div class="modal-content bg-white rounded-3xl shadow-2xl p-6 sm:p-8 max-w-md w-full mx-4">
-      <div class="text-center">
-        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-xl sm:text-2xl">✅</span>
-        </div>
-        <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Success!</h2>
-        <div id="successMessage" class="text-gray-600 mb-6"></div>
-        <button onclick="closeModal('successModal')" 
-                class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-3 rounded-xl transition-colors">
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-
-    <!-- Upload Photo Modal -->
-  <div id="uploadPhotoModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
-    <div class="modal-content bg-white rounded-3xl shadow-2xl p-6 sm:p-8 max-w-md w-full mx-4">
-      <div class="text-center mb-4 sm:mb-6">
-        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-xl sm:text-2xl">📸</span>
-        </div>
-        <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Upload Photo</h2>
-      </div>
-      <form id="uploadPhotoForm" class="space-y-4">
-        <div>
-          <label for="photoTitle" class="block text-sm font-semibold text-gray-700 mb-2">Photo Title *</label>
-          <input type="text" id="photoTitle" name="photoTitle" required
-                 class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500">
-        </div>
-        <div>
-          <label for="photoDescription" class="block text-sm font-semibold text-gray-700 mb-2">Description</label>
-          <textarea id="photoDescription" name="photoDescription" placeholder="Describe this photo..." rows="3"
-                    class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 resize-none"></textarea>
-        </div>
-        <div>
-          <label for="galleryPhoto" class="block text-sm font-semibold text-gray-700 mb-2">Choose Photo *</label>
-          <input type="file" id="galleryPhoto" name="galleryPhoto" accept="image/*" required class="hidden">
-          <label for="galleryPhoto" class="flex items-center justify-center w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer hover:border-yellow-500">
-            <span class="text-gray-600">📷 Choose Photo</span>
-          </label>
-        </div>
-        <div class="flex gap-4 pt-4">
-          <button type="submit" class="flex-1 bg-yellow-500 hover:bg-yellow-600 text-green-800 font-semibold py-2 sm:py-3 rounded-xl transition-colors">Upload Photo</button>
-          <button type="button" onclick="closeModal('uploadPhotoModal')" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-700 font-semibold py-2 sm:py-3 rounded-xl transition-colors">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-
-  <!-- Add Birthday Modal -->
-  <div id="addBirthdayModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
-    <div class="modal-content bg-white rounded-3xl shadow-2xl p-6 sm:p-8 max-w-md w-full mx-4">
-      <div class="text-center mb-4 sm:mb-6">
-        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-xl sm:text-2xl">🎉</span>
-        </div>
-        <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Add Birthday</h2>
-      </div>
-      <form id="addBirthdayForm" class="space-y-4">
-        <div>
-          <label for="birthdayName" class="block text-sm font-semibold text-gray-700 mb-2">Name *</label>
-          <input type="text" id="birthdayName" required 
-                 class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500">
-        </div>
-        <div>
-          <label for="birthdayDate" class="block text-sm font-semibold text-gray-700 mb-2">Birthday *</label>
-          <input type="date" id="birthdayDate" required 
-                 class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500">
-        </div>
-        <div>
-          <label for="birthdayMessage" class="block text-sm font-semibold text-gray-700 mb-2">Birthday Message</label>
-          <textarea id="birthdayMessage" placeholder="Birthday wishes..." rows="3" 
-                    class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 resize-none"></textarea>
-        </div>
-        <div class="flex gap-4 pt-4">
-          <button type="submit" class="flex-1 bg-yellow-500 hover:bg-yellow-600 text-green-800 font-semibold py-2 sm:py-3 rounded-xl transition-colors">Add Birthday</button>
-          <button type="button" onclick="closeModal('addBirthdayModal')" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-700 font-semibold py-2 sm:py-3 rounded-xl transition-colors">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Post Message Modal -->
-    <!-- Post Message Modal -->
-  <div id="postMessageModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
-    <div class="modal-content bg-white rounded-3xl shadow-2xl p-6 sm:p-8 max-w-lg w-full mx-4">
-      <div class="text-center mb-4 sm:mb-6">
-        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-xl sm:text-2xl">📝</span>
-        </div>
-        <h2 class="text-xl sm:text-2xl font-bold text-gray-900">Post Alumni Message</h2>
-        <p class="text-gray-600">Share announcements, congratulations, events, or job openings with fellow alumni.</p>
-      </div>
-      <form id="postMessageForm" class="space-y-4">
-        <div>
-          <label for="messagePosterName" class="block text-sm font-semibold text-gray-700 mb-2">Your Name *</label>
-          <input type="text" id="messagePosterName" name="messagePosterName" required placeholder="Enter your full name"
-                 class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500">
-        </div>
-        <div>
-          <label for="messageTitle" class="block text-sm font-semibold text-gray-700 mb-2">Message Title *</label>
-          <input type="text" id="messageTitle" name="messageTitle" required placeholder="e.g., Job Opening, Congratulations, Event Announcement"
-                 class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500">
-        </div>
-        <div>
-          <label for="messageType" class="block text-sm font-semibold text-gray-700 mb-2">Message Type *</label>
-          <select id="messageType" name="messageType" required
-                  class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500">
-            <option value="">Select Type</option>
-            <option value="congratulations">🎉 Congratulations</option>
-            <option value="event">📅 Event Announcement</option>
-            <option value="job">💼 Job Opening</option>
-            <option value="general">💬 General Message</option>
-            <option value="business">🏢 Business Opportunity</option>
-            <option value="reunion">🤝 Reunion/Meetup</option>
-          </select>
-        </div>
-        <div>
-          <label for="messageContent" class="block text-sm font-semibold text-gray-700 mb-2">Message Content *</label>
-          <textarea id="messageContent" name="messageContent" required placeholder="Write your message here... Emojis are welcome! 😊" rows="4"
-                    class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500 resize-none"></textarea>
-        </div>
-        <div>
-          <label for="messageContact" class="block text-sm font-semibold text-gray-700 mb-2">Contact Information (Optional)</label>
-          <input type="text" id="messageContact" name="messageContact" placeholder="Email, phone, or other contact details"
-                 class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-500">
-        </div>
-        <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-          <p class="text-sm text-yellow-800">
-            ℹ️ <strong>Note:</strong> Your message will be visible to all alumni and will automatically expire after 7 days.
-          </p>
-        </div>
-        <div class="flex gap-4 pt-4">
-          <button type="submit" class="flex-1 bg-yellow-500 hover:bg-yellow-600 text-green-800 font-semibold py-2 sm:py-3 rounded-xl transition-colors">📤 Post Message</button>
-          <button type="button" onclick="closeModal('postMessageModal')" class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-700 font-semibold py-2 sm:py-3 rounded-xl transition-colors">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- View Payment Proof Modal -->
-  <div id="viewProofModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
-    <div class="modal-content bg-white rounded-3xl shadow-2xl p-6 sm:p-8 max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
-      <div class="text-center mb-4 sm:mb-6">
-        <h2 class="text-xl sm:text-2xl font-bold text-gray-900">📄 Payment Proof</h2>
-        <div id="proofDetails" class="text-gray-600"></div>
-      </div>
-      <div id="proofContent" class="text-center mb-4 sm:mb-6"></div>
-      <button onclick="closeModal('viewProofModal')" 
-              class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-3 rounded-xl transition-colors">
-        Close
-      </button>
-    </div>
-  </div>  <script>
-    // Global variables
-     let currentSection = 'home';
-    let isAdminLoggedIn = false; // This will be managed by Firebase Auth state
-    let allAlumni = [];
-    let allPendingDues = [];
-    let allApprovedDues = [];
-
-    // Initialize the application
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('Initializing Great Faith Alumni Network...');
-      initializeApp();
-      setupEventListeners();
-      handleHashNavigation();
-    });
-
-    // Initialize app
-        function initializeApp() {
-      try {
-        loadTheme();
-        populateYearDropdowns();
-        loadAllData();
-        setupFileInputs();
-        updateStats();
-
-        // Auto-cleanup expired messages every hour
-        setInterval(cleanupExpiredMessages, 3600000);
-
-        // Initial cleanup
-        cleanupExpiredMessages();
-
-        // Firebase Auth State Listener - ADD THIS BLOCK
-        firebase.auth().onAuthStateChanged((user) => {
-          if (user) {
-            // User is signed in.
-            isAdminLoggedIn = true;
-            console.log('User is logged in:', user.email);
-            // If admin panel was open, ensure it stays open
-            if (window.location.hash === '#adminPanel' && document.getElementById('adminPanel').classList.contains('hidden')) {
-                showAdminPanel();
-            }
-          } else {
-            // User is signed out.
-            isAdminLoggedIn = false;
-            console.log('User is logged out.');
-            // If admin panel is currently displayed, hide it
-            if (document.getElementById('adminPanel') && !document.getElementById('adminPanel').classList.contains('hidden')) {
-              showMainSite();
-            }
-          }
-
-          if (window.location.hash === '#adminPanel') {
-    handleHashNavigation();
-  }
-        });
-        // END ADDED BLOCK
-
-        console.log('App initialized successfully');
-      } catch (error) {
-        console.error('Error initializing app:', error);
-      }
-
-
-      // Call initializeApp on page load
-   window.onload = initializeApp;
-    }
-    
-
-    // Setup event listeners
-    function setupEventListeners() {
-      try {
-        // Hash change for admin panel navigation
-        window.addEventListener('hashchange', handleHashNavigation);
-        
-        // Custom amount toggle
-        document.getElementById('amountPaid').addEventListener('change', function() {
-          const customGroup = document.getElementById('customAmountGroup');
-          if (this.value === 'custom') {
-            customGroup.classList.remove('hidden');
-            document.getElementById('customAmount').required = true;
-          } else {
-            customGroup.classList.add('hidden');
-            document.getElementById('customAmount').required = false;
-          }
-        });
-
-        // Form submissions
-        document.getElementById('registrationForm').addEventListener('submit', handleRegistrationSubmit);
-        document.getElementById('duesForm').addEventListener('submit', handleDuesSubmit);
-        document.getElementById('uploadPhotoForm').addEventListener('submit', handlePhotoUpload);
-        document.getElementById('addBirthdayForm').addEventListener('submit', handleBirthdayAdd);
-        document.getElementById('postMessageForm').addEventListener('submit', handleMessagePost);
-        document.getElementById('adminLoginForm').addEventListener('submit', handleAdminLogin);
-        
-        console.log('Event listeners setup successfully');
-      } catch (error) {
-        console.error('Error setting up event listeners:', error);
-      }
-    }
-
-    // Handle hash navigation for admin panel
-       function handleHashNavigation() {
-     const hash = window.location.hash;
-
-     // Existing navigation cases
-     if (hash === '#home' || hash === '') {
-       showSection('home');
-     } else if (hash === '#gallery') {
-       showSection('gallery');
-     }
-     // Add other sections as needed...
-
-     // Special case for admin panel
-     else if (hash === '#adminPanel') {
-       if (!isAdminLoggedIn) {
-         showAdminLogin(); // Show the login modal if not logged in
-       } else {
-         showAdminPanel(); // Show the admin panel if logged in
-       }
-     }
-   }
-   
-
-
-    // Theme functionality - FIXED
-    function toggleTheme() {
-      const body = document.body;
-      const themeToggle = document.getElementById('themeToggle');
       
-      try {
-        if (body.classList.contains('dark')) {
-          body.classList.remove('dark');
-          themeToggle.textContent = '🌙';
-          localStorage.setItem('theme', 'light');
-          console.log('Switched to light theme');
-        } else {
-          body.classList.add('dark');
-          themeToggle.textContent = '☀️';
-          localStorage.setItem('theme', 'dark');
-          console.log('Switched to dark theme');
-        }
-      } catch (error) {
-        console.error('Error toggling theme:', error);
-      }
-    }
-
-    function loadTheme() {
-      try {
-        const savedTheme = localStorage.getItem('theme');
-        const themeToggle = document.getElementById('themeToggle');
-        
-        if (savedTheme === 'dark') {
-          document.body.classList.add('dark');
-          themeToggle.textContent = '☀️';
-          console.log('Loaded dark theme from localStorage');
-        } else {
-          themeToggle.textContent = '🌙';
-          console.log('Loaded light theme (default)');
-        }
-      } catch (error) {
-        console.error('Error loading theme:', error);
-      }
-    }
-
-    // Section navigation
-        // Section navigation
-    function showSection(sectionId) {
-      try {
-        // Hide all sections
-        document.querySelectorAll('.section').forEach(section => {
-          section.classList.add('hidden');
-          section.classList.remove('active');
-        });
-        
-        // Remove active class from all nav tabs
-        document.querySelectorAll('.nav-tab').forEach(tab => {
-          tab.classList.remove('active', 'border-yellow-400', 'text-green-600');
-          tab.classList.add('text-gray-600');
-        });
-        
-        // Show selected section
-        const selectedSection = document.getElementById(sectionId);
-        if (selectedSection) {
-          selectedSection.classList.remove('hidden');
-          selectedSection.classList.add('active');
-        }
-        
-        // Find the corresponding nav tab and add active class
-        // This is the main change: we find the tab by its onclick attribute or data-section
-        const targetTab = document.querySelector(`.nav-tab[onclick*="showSection('${sectionId}')"]`);
-        if (targetTab) {
-          targetTab.classList.remove('text-gray-600');
-          targetTab.classList.add('active', 'border-yellow-400', 'text-green-600');
-        }
-        
-        currentSection = sectionId;
-        console.log('Switched to section:', sectionId);
-      } catch (error) {
-        console.error('Error switching section:', error);
-      }
-    }
-
-    // Admin functionality
-    function showAdminLogin() {
-      showModal('adminLoginModal');
-    }
-
-
-    // Admin functionality
-    function showAdminLogin() {
-      showModal('adminLoginModal');
-    }
-
-    function handleAdminLogin(e) {
-      e.preventDefault();
-      const email = document.getElementById('adminEmail').value; // Get email
-      const password = document.getElementById('adminPassword').value;
-
-      firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          isAdminLoggedIn = true; // Set flag
-          closeModal('adminLoginModal');
-          showAdminPanel();
-          document.getElementById('adminEmail').value = ''; // Clear fields
-          document.getElementById('adminPassword').value = '';
-          console.log('Admin login successful for user:', user.email);
-          showSuccessMessage(`Welcome, Admin ${user.email}!`);
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.error('Error during admin login:', errorCode, errorMessage);
-          alert(`Login failed: ${errorMessage}`);
-          isAdminLoggedIn = false; // Ensure flag is false on failure
-        });
-    }   function handleAdminLogin(e) {
-     e.preventDefault();
-     const email = document.getElementById('adminEmail').value;
-     const password = document.getElementById('adminPassword').value;
-
-     firebase.auth().signInWithEmailAndPassword(email, password)
-       .then((userCredential) => {
-         isAdminLoggedIn = true; // Set the admin login state
-         closeModal('adminLoginModal'); // Close the login modal
-         showAdminPanel(); // Show the admin panel
-       })
-       .catch((error) => {
-         alert('Login failed: ' + error.message); // Show error message
-       });
-   }
-   
-
-    function showAdminPanel() {
-      try {
-        // Check if user is actually logged in via Firebase Auth
-        if (!firebase.auth().currentUser) {
-          alert('You must be logged in to access the admin panel.');
-          showAdminLogin(); // Redirect to login if not logged in
-          return;
-        }
-
-        document.getElementById('mainContent').classList.add('hidden');
-        document.getElementById('mainNav').classList.add('hidden');
-        document.getElementById('adminPanel').classList.remove('hidden');
-        window.location.hash = 'adminPanel';
-        loadAdminData();
-        console.log('Admin panel displayed');
-      } catch (error) {
-        console.error('Error showing admin panel:', error);
-      }
-    }
-
-    function showMainSite() {
-      try {
-        document.getElementById('adminPanel').classList.add('hidden');
-        document.getElementById('mainContent').classList.remove('hidden');
-        document.getElementById('mainNav').classList.remove('hidden');
-        window.location.hash = '';
-        console.log('Returned to main site');
-      } catch (error) {
-        console.error('Error showing main site:', error);
-      }
-    }
-
-    function adminLogout() {
-      firebase.auth().signOut().then(() => {
-        // Sign-out successful.
-        isAdminLoggedIn = false; // Reset flag
-        showMainSite();
-        console.log('Admin logged out');
-        alert('You have been logged out.');
-      }).catch((error) => {
-        // An error happened.
-        console.error('Error during admin logout:', error);
-        alert('Logout failed. Please try again.');
-      });
-    }
-
-
-
-    function showAdminPanel() {
-      try {
-        document.getElementById('mainContent').classList.add('hidden');
-        document.getElementById('mainNav').classList.add('hidden');
-        document.getElementById('adminPanel').classList.remove('hidden');
-        window.location.hash = 'adminPanel';
-        loadAdminData();
-        console.log('Admin panel displayed');
-      } catch (error) {
-        console.error('Error showing admin panel:', error);
-      }
-    }
-
-    function showMainSite() {
-      try {
-        document.getElementById('adminPanel').classList.add('hidden');
-        document.getElementById('mainContent').classList.remove('hidden');
-        document.getElementById('mainNav').classList.remove('hidden');
-        window.location.hash = '';
-        console.log('Returned to main site');
-      } catch (error) {
-        console.error('Error showing main site:', error);
-      }
-    }
-
-    function adminLogout() {
-      isAdminLoggedIn = false;
-      showMainSite();
-      console.log('Admin logged out');
-    }
-
-    function showAdminSection(sectionId) {
-      try {
-        // Remove active class from all admin nav tabs
-        document.querySelectorAll('.admin-nav-tab').forEach(tab => {
-          tab.classList.remove('active', 'border-yellow-400', 'text-green-600');
-          tab.classList.add('text-gray-600');
-        });
-        
-        // Hide all admin sections
-        document.querySelectorAll('.admin-section').forEach(section => {
-          section.classList.add('hidden');
-        });
-        
-        // Show selected admin section
-        const sectionMap = {
-          'alumni': 'adminAlumniSection',
-          'pending-dues': 'adminPendingDuesSection',
-          'approved-dues': 'adminApprovedDuesSection',
-          'analytics': 'adminAnalyticsSection'
-        };
-        
-        const targetSection = document.getElementById(sectionMap[sectionId]);
-        if (targetSection) {
-          targetSection.classList.remove('hidden');
-        }
-        
-        // Add active class to clicked tab
-        if (event && event.target) {
-          event.target.classList.remove('text-gray-600');
-          event.target.classList.add('active', 'border-yellow-400', 'text-green-600');
-        }
-
-        // Load specific section data
-        switch(sectionId) {
-          case 'alumni':
-            loadAlumniManagement();
-            break;
-          case 'pending-dues':
-            loadPendingDues();
-            break;
-          case 'approved-dues':
-            loadApprovedDues();
-            break;
-          case 'analytics':
-            loadAnalytics();
-            break;
-        }
-        console.log('Switched to admin section:', sectionId);
-      } catch (error) {
-        console.error('Error switching admin section:', error);
-      }
-    }
-
-    // Modal functions
-    function showModal(modalId) {
-      try {
-        document.getElementById(modalId).classList.remove('hidden');
-      } catch (error) {
-        console.error('Error showing modal:', error);
-      }
-    }
-
-    function closeModal(modalId) {
-      try {
-        document.getElementById(modalId).classList.add('hidden');
-      } catch (error) {
-        console.error('Error closing modal:', error);
-      }
-    }
-
-    function showSuccessMessage(message) {
-      try {
-        document.getElementById('successMessage').textContent = message;
-        showModal('successModal');
-      } catch (error) {
-        console.error('Error showing success message:', error);
-      }
-    }
-
-    function showUploadPhotoModal() {
-      showModal('uploadPhotoModal');
-    }
-
-    function showAddBirthdayModal() {
-      showModal('addBirthdayModal');
-    }
-
-
-    function showPostMessageModal() {
-      showModal('postMessageModal');
-    }
-
-    // Helper function to manage button loading state
-    function setButtonLoadingState(button, isLoading, originalText, loadingText = 'Loading...') {
-      if (isLoading) {
-        button.disabled = true;
-        button.innerHTML = `<span class="flex items-center justify-center">
-                              <svg class="animate-spin h-5 w-5 mr-3 text-white" viewBox="0 0 24 24">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                              </svg>
-                              ${loadingText}
-                            </span>`;
-      } else {
-        button.disabled = false;
-        button.innerHTML = originalText;
-      }
-    }
-    
-
-    // Populate year dropdowns
-    function populateYearDropdowns() {
-      try {
-        const yearSelects = ['yearOfCompletion', 'yearGroup'];
-        const currentYear = new Date().getFullYear();
-        
-        yearSelects.forEach(selectId => {
-          const select = document.getElementById(selectId);
-          if (select) {
-            for (let year = currentYear; year >= 1990; year--) {
-              const option = document.createElement('option');
-              option.value = year;
-              option.textContent = selectId === 'yearGroup' ? `Class of ${year}` : year;
-              select.appendChild(option);
-            }
-          }
-        });
-        console.log('Year dropdowns populated');
-      } catch (error) {
-        console.error('Error populating year dropdowns:', error);
-      }
-    }
-
-    // File input setup
-    function setupFileInputs() {
-      try {
-        const fileInputs = [
-          { input: 'profilePhoto', label: '📷 Choose Photo' },
-          { input: 'resumeUpload', label: '📄 Choose Resume' },
-          { input: 'paymentProof', label: '📄 Choose File' },
-          { input: 'galleryPhoto', label: '📷 Choose Photo' }
-        ];
-
-        fileInputs.forEach(({ input, label }) => {
-          const inputElement = document.getElementById(input);
-          if (inputElement) {
-            inputElement.addEventListener('change', function(e) {
-              const labelElement = this.parentElement.querySelector('label span');
-              if (labelElement && e.target.files.length > 0) {
-                const fileName = e.target.files[0].name;
-                labelElement.textContent = `${label.split(' ')[0]} ${fileName.length > 20 ? fileName.substring(0, 20) + '...' : fileName}`;
-              } else if (labelElement) {
-                labelElement.textContent = label;
-              }
-            });
-          }
-        });
-        console.log('File inputs setup completed');
-      } catch (error) {
-        console.error('Error setting up file inputs:', error);
-      }
-    }
-
-    // Load all data from Firebase
-    function loadAllData() {
-      try {
-        loadGallery();
-        loadBirthdays();
-        loadAnnouncements();
-        loadAchievements();
-        loadAlumniMessages();
-        loadMyDuesHistory();
-        console.log('All data loading initiated');
-      } catch (error) {
-        console.error('Error loading all data:', error);
-      }
-    }
-
-
-
-// Replace the entire saveAlumniData function with this:
-async function saveAlumniData(data) {
-  try {
-    // Check for existing alumni with similar names
-    const snapshot = await db.ref('alumniSubmissions').once('value');
-    const alumniList = snapshot.val() || {};
-    
-    // Normalize names for comparison
-    const newNameNormalized = data.fullName.toLowerCase().trim().replace(/\s+/g, ' ');
-    
-    // Find duplicates
-    const duplicates = Object.entries(alumniList).filter(([key, alumni]) => {
-      const existingNameNormalized = alumni.fullName.toLowerCase().trim().replace(/\s+/g, ' ');
-      return existingNameNormalized === newNameNormalized;
-    });
-
-    if (duplicates.length > 0) {
-      // Show confirmation dialog
-      const shouldOverwrite = confirm(
-        `A registration already exists for "${data.fullName}".\n\n` +
-        `Do you want to update this information? (This will overwrite the existing record)`
-      );
+      <div class="glass-card rounded-xl p-4 text-center">
+        <div class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h4 class="font-medium text-green-50">Events</h4>
+        <p class="text-sm text-green-200 mt-1">Reunions and gatherings</p>
+      </div>
       
-      if (shouldOverwrite) {
-        // Update existing record
-        const [key] = duplicates[0];
-        await db.ref(`alumniSubmissions/${key}`).update(data);
-        return { success: true, message: 'Registration updated successfully!' };
-      } else {
-        return { success: false, message: 'Registration cancelled.' };
-      }
-    } else {
-      // No duplicates found
-      await db.ref('alumniSubmissions').push(data);
-      return { success: true, message: 'Registration successful!' };
-    }
-  } catch (error) {
-    console.error('Error saving alumni data:', error);
-    throw error;
-  }
-}
-
-
-
-
-
-
- // Replace the entire handleRegistrationSubmit function with this:
-async function handleRegistrationSubmit(e) {
-  e.preventDefault();
-  const submitButton = e.submitter;
-  const originalButtonText = submitButton.innerHTML;
-
-  try {
-    setButtonLoadingState(submitButton, true, originalButtonText, 'Processing...');
-
-    const formData = new FormData(e.target);
-    const data = {};
-
-    // Collect form data
-    for (let [key, value] of formData.entries()) {
-      if (key !== 'profilePhoto' && key !== 'resumeUpload') {
-        data[key] = value;
-      }
-    }
-
-    // Handle files
-    const profilePhoto = formData.get('profilePhoto');
-    const resume = formData.get('resumeUpload');
-
-    if (profilePhoto && profilePhoto.size > 0) {
-      data.profilePhoto = await readFileAsDataURL(profilePhoto);
-    }
-    if (resume && resume.size > 0) {
-      data.resume = await readFileAsDataURL(resume);
-    }
-
-    // Save data
-    const result = await saveAlumniData(data);
-    
-    if (result.success) {
-      showSuccessMessage(result.message);
-      document.getElementById('registrationForm').reset();
-      resetFileInputLabels();
-      updateStats();
-      loadAchievements();
-    }
-
-  } catch (error) {
-    console.error('Registration error:', error);
-    alert('Error during registration: ' + error.message);
-  } finally {
-    setButtonLoadingState(submitButton, false, originalButtonText);
-  }
-}
-
-
-      // Dues form handling
-    function handleDuesSubmit(e) {
-      e.preventDefault();
-
-      const submitButton = e.submitter; // Get the button that triggered the submit
-      const originalButtonText = submitButton.innerHTML; // Store original text
-
-      try {
-        console.log('Starting dues submission...');
-        setButtonLoadingState(submitButton, true, originalButtonText, 'Submitting...'); // Set loading state
-
-        const formData = new FormData(e.target);
-        const data = {};
-
-        // Collect form data
-        for (let [key, value] of formData.entries()) {
-          if (key !== 'paymentProof') {
-            data[key] = value;
-          }
-        }
-
-        // Handle custom amount
-        if (data.amountPaid === 'custom') {
-          data.amountPaid = data.customAmount;
-          delete data.customAmount;
-        }
-
-        console.log('Dues form data collected:', data);
-
-        // Handle payment proof file
-        const proofFile = formData.get('paymentProof');
-        if (proofFile && proofFile.size > 0) {
-          const reader = new FileReader();
-          reader.onload = function(e) {
-            data.paymentProof = e.target.result;
-            data.proofFileName = proofFile.name;
-            console.log('Payment proof processed');
-            savePendingDues(data)
-              .finally(() => { // Use .finally() to ensure button state is reset
-                setButtonLoadingState(submitButton, false, originalButtonText);
-              });
-          };
-          reader.readAsDataURL(proofFile);
-        } else {
-          // If no payment proof is required/provided, proceed directly
-          savePendingDues(data)
-            .finally(() => { // Use .finally() to ensure button state is reset
-              setButtonLoadingState(submitButton, false, originalButtonText);
-            });
-        }
-      } catch (error) {
-        console.error('Error in dues submission:', error);
-        alert('Dues submission error. Please try again.');
-        setButtonLoadingState(submitButton, false, originalButtonText); // Reset button on immediate error
-      }
-    }
-    
-
-    // Dues form handling - FIXED
-    function handleDuesSubmit(e) {
-      e.preventDefault();
-      
-      try {
-        console.log('Starting dues submission...');
-        const formData = new FormData(e.target);
-        const data = {};
-        
-        // Collect form data
-        for (let [key, value] of formData.entries()) {
-          if (key !== 'paymentProof') {
-            data[key] = value;
-          }
-        }
-        
-        // Handle custom amount
-        if (data.amountPaid === 'custom') {
-          data.amountPaid = data.customAmount;
-          delete data.customAmount;
-        }
-        
-        console.log('Dues form data collected:', data);
-        
-        // Handle payment proof file
-        const proofFile = formData.get('paymentProof');
-        if (proofFile && proofFile.size > 0) {
-          const reader = new FileReader();
-          reader.onload = function(e) {
-            data.paymentProof = e.target.result;
-            data.proofFileName = proofFile.name;
-            console.log('Payment proof processed');
-            savePendingDues(data);
-          };
-          reader.readAsDataURL(proofFile);
-        } else {
-          savePendingDues(data);
-        }
-      } catch (error) {
-        console.error('Error in dues submission:', error);
-        alert('Dues submission error. Please try again.');
-      }
-    }
-
-       function savePendingDues(data) {
-      data.id = Date.now();
-      data.submittedAt = new Date().toISOString();
-      data.status = 'pending';
-
-      console.log('Saving dues data to Firebase:', data);
-
-      // Return the promise from the Firebase operation
-      return db.ref('pendingDues').push(data)
-        .then(() => {
-          console.log('Dues data saved successfully');
-          document.getElementById('duesForm').reset();
-          resetFileInputLabels();
-          document.getElementById('customAmountGroup').classList.add('hidden');
-
-          // Show pending status
-          document.getElementById('pendingDuesStatus').classList.remove('hidden');
-
-          showSuccessMessage('Dues submission sent for admin approval!');
-          loadMyDuesHistory();
-        })
-        .catch((error) => {
-          console.error('Firebase error saving dues data:', error);
-          alert('Error saving dues submission. Please check your internet connection and try again.');
-          throw error; // Re-throw to propagate the error to the .finally() block
-        });
-    }
-    
-        // Photo upload handling
-        // Photo upload handling
-    function handlePhotoUpload(e) {
-      e.preventDefault();
-
-      const submitButton = e.submitter;
-      const originalButtonText = submitButton.innerHTML;
-
-      try {
-        console.log('Starting photo upload...');
-        setButtonLoadingState(submitButton, true, originalButtonText, 'Uploading...');
-
-        // Get the file input element directly
-        const galleryPhotoInput = document.getElementById('galleryPhoto');
-        const photoFile = galleryPhotoInput.files[0]; // Get the first selected file
-
-        // Check if a file was actually selected
-        if (!photoFile) { // Check for null or undefined
-          alert('Please select a photo to upload.');
-          setButtonLoadingState(submitButton, false, originalButtonText);
-          return; // Stop execution if no file
-        }
-
-        // Also check if the file size is 0 (empty file)
-        if (photoFile.size === 0) {
-            alert('Selected file is empty. Please choose a valid photo.');
-            setButtonLoadingState(submitButton, false, originalButtonText);
-            return;
-        }
-
-        // Get other form data manually or using FormData for non-file fields
-        const photoTitle = document.getElementById('photoTitle').value;
-        const photoDescription = document.getElementById('photoDescription').value;
-
-        const data = {
-          title: photoTitle,
-          description: photoDescription,
-          uploadedAt: new Date().toISOString(),
-          id: Date.now()
-        };
-
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          data.image = e.target.result; // Base64 encoded image
-
-          console.log('Saving photo to Firebase:', data);
-
-          // Save to Firebase
-          db.ref('gallery').push(data)
-            .then(() => {
-              console.log('Photo saved successfully');
-              closeModal('uploadPhotoModal');
-              loadGallery();
-              showSuccessMessage('Photo uploaded successfully!');
-              document.getElementById('uploadPhotoForm').reset();
-              resetFileInputLabels(); // Reset the file input label
-              updateStats();
-            })
-            .catch((error) => {
-              console.error('Firebase error uploading photo:', error);
-              alert('Error uploading photo. Please check your internet connection and try again.');
-            })
-            .finally(() => {
-              setButtonLoadingState(submitButton, false, originalButtonText);
-            });
-        };
-        reader.readAsDataURL(photoFile); // Read the file as a data URL
-      } catch (error) {
-        console.error('Error in photo upload:', error);
-        alert('Photo upload error. Please try again.');
-        setButtonLoadingState(submitButton, false, originalButtonText);
-      }
-    }
-    
-    
-
-    // Birthday handling - FIXED
-        // Birthday handling
-    function handleBirthdayAdd(e) {
-      e.preventDefault();
-
-      const submitButton = e.submitter;
-      const originalButtonText = submitButton.innerHTML;
-
-      try {
-        console.log('Adding birthday...');
-        setButtonLoadingState(submitButton, true, originalButtonText, 'Adding...');
-
-        const formData = new FormData(e.target);
-        const data = {
-          name: formData.get('birthdayName'),
-          date: formData.get('birthdayDate'),
-          message: formData.get('birthdayMessage'),
-          addedAt: new Date().toISOString(),
-          id: Date.now()
-        };
-
-        console.log('Saving birthday to Firebase:', data);
-
-        // Save to Firebase
-        db.ref('birthdays').push(data)
-          .then(() => {
-            console.log('Birthday saved successfully');
-            closeModal('addBirthdayModal');
-            loadBirthdays();
-            showSuccessMessage('Birthday added successfully!');
-            e.target.reset();
-          })
-          .catch((error) => {
-            console.error('Firebase error adding birthday:', error);
-            alert('Error adding birthday. Please check your internet connection and try again.');
-          })
-          .finally(() => {
-            setButtonLoadingState(submitButton, false, originalButtonText);
-          });
-      } catch (error) {
-        console.error('Error in birthday add:', error);
-        alert('Birthday add error. Please try again.');
-        setButtonLoadingState(submitButton, false, originalButtonText);
-      }
-    }
-    
-
-    // Message handling - FIXED (Now saves to announcements AND messages)
-        // Message handling
-    function handleMessagePost(e) {
-      e.preventDefault();
-
-      const submitButton = e.submitter;
-      const originalButtonText = submitButton.innerHTML;
-
-      try {
-        console.log('Posting message...');
-        setButtonLoadingState(submitButton, true, originalButtonText, 'Posting...');
-
-        const formData = new FormData(e.target);
-        const data = {
-          posterName: formData.get('messagePosterName'),
-          title: formData.get('messageTitle'),
-          type: formData.get('messageType'),
-          content: formData.get('messageContent'),
-          contact: formData.get('messageContact'),
-          postedAt: new Date().toISOString(),
-          expiresAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(), // 7 days from now
-          id: Date.now()
-        };
-
-        console.log('Saving message to Firebase:', data);
-
-        // Save to both announcements and messages for compatibility
-        Promise.all([
-          db.ref('announcements').push(data),
-          db.ref('messages').push(data)
-        ])
-          .then(() => {
-            console.log('Message saved successfully');
-            closeModal('postMessageModal');
-            loadAlumniMessages();
-            loadAnnouncements(); // Reload announcements
-            showSuccessMessage('Message posted successfully! It will be visible for 7 days.');
-            e.target.reset();
-            updateStats();
-          })
-          .catch((error) => {
-            console.error('Firebase error posting message:', error);
-            alert('Error posting message. Please check your internet connection and try again.');
-          })
-          .finally(() => {
-            setButtonLoadingState(submitButton, false, originalButtonText);
-          });
-      } catch (error) {
-        console.error('Error in message post:', error);
-        alert('Message post error. Please try again.');
-        setButtonLoadingState(submitButton, false, originalButtonText);
-      }
-    }
-    
-   // Utility Functions
-   function someOtherUtilityFunction() {
-     // Some code here
-   }
-
-   // Add this with your other utility functions
-   function readFileAsDataURL(file) {
-     return new Promise((resolve, reject) => {
-       const reader = new FileReader();
-       reader.onload = () => resolve(reader.result);
-       reader.onerror = reject;
-       reader.readAsDataURL(file);
-     });
-   }
-   
-    // Load gallery from Firebase - FIXED
-    function loadGallery() {
-      try {
-        console.log('Loading gallery from Firebase...');
-        db.ref('gallery').once('value')
-          .then((snapshot) => {
-            const gallery = document.getElementById('photoGallery');
-            const photos = [];
-            
-            snapshot.forEach((childSnapshot) => {
-              photos.push({
-                ...childSnapshot.val(),
-                firebaseKey: childSnapshot.key
-              });
-            });
-            
-            console.log('Gallery loaded:', photos.length, 'photos');
-            
-            if (photos.length === 0) {
-              gallery.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-gray-500 text-lg">No photos uploaded yet. Be the first to share a memory!</p></div>';
-              return;
-            }
-            
-            // Sort by newest first
-            photos.sort((a, b) => new Date(b.uploadedAt) - new Date(a.uploadedAt));
-            
-            gallery.innerHTML = photos.map(photo => `
-              <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
-                <img src="${photo.image}" alt="${photo.title}" class="w-full h-48 object-cover">
-                <div class="p-4">
-                  <h4 class="font-bold text-gray-900 mb-2">${photo.title}</h4>
-                  <p class="text-gray-600 text-sm mb-2">${photo.description || 'No description'}</p>
-                  <small class="text-gray-500">Uploaded: ${new Date(photo.uploadedAt).toLocaleDateString()}</small>
-                </div>
-              </div>
-            `).join('');
-          })
-          .catch((error) => {
-            console.error('Error loading gallery:', error);
-            document.getElementById('photoGallery').innerHTML = '<div class="col-span-full text-center py-12"><p class="text-red-500">Error loading gallery. Please refresh the page.</p></div>';
-          });
-      } catch (error) {
-        console.error('Error in loadGallery:', error);
-      }
-    }
-
-    // Load birthdays from Firebase - FIXED
-    function loadBirthdays() {
-      try {
-        console.log('Loading birthdays from Firebase...');
-        db.ref('birthdays').once('value')
-          .then((snapshot) => {
-            const birthdayList = document.getElementById('birthdayList');
-            const birthdays = [];
-            
-            snapshot.forEach((childSnapshot) => {
-              birthdays.push({
-                ...childSnapshot.val(),
-                firebaseKey: childSnapshot.key
-              });
-            });
-            
-            console.log('Birthdays loaded:', birthdays.length, 'birthdays');
-            
-            if (birthdays.length === 0) {
-              birthdayList.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-gray-500 text-lg">No birthdays added yet.</p></div>';
-              return;
-            }
-            
-            // Sort birthdays by date
-            birthdays.sort((a, b) => new Date(a.date) - new Date(b.date));
-            
-            birthdayList.innerHTML = birthdays.map(birthday => {
-              const date = new Date(birthday.date);
-              const today = new Date();
-              const isToday = date.toDateString() === today.toDateString();
-              const isUpcoming = date >= today && date <= new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
-              
-              return `
-                <div class="card-hover bg-white rounded-2xl shadow-lg p-6 ${isToday ? 'border-2 border-yellow-400 bg-yellow-50' : isUpcoming ? 'border-2 border-green-400' : ''}">
-                  <div class="flex items-center space-x-4">
-                    <div class="text-4xl">${isToday ? '🎉' : '🎂'}</div>
-                    <div class="flex-1">
-                      <h3 class="text-xl font-bold text-gray-900">${birthday.name}</h3>
-                      <p class="text-gray-600">${date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}</p>
-                      ${birthday.message ? `<p class="mt-2 text-gray-700 italic">${birthday.message}</p>` : ''}
-                      ${isToday ? '<p class="mt-2 text-green-600 font-bold">🎈 Happy Birthday!</p>' : ''}
-                    </div>
-                  </div>
-                </div>
-              `;
-            }).join('');
-          })
-          .catch((error) => {
-            console.error('Error loading birthdays:', error);
-            document.getElementById('birthdayList').innerHTML = '<div class="col-span-full text-center py-12"><p class="text-red-500">Error loading birthdays. Please refresh the page.</p></div>';
-          });
-      } catch (error) {
-        console.error('Error in loadBirthdays:', error);
-      }
-    }
-
-    // Load announcements - FIXED to load from Firebase
-    function loadAnnouncements() {
-      try {
-        console.log('Loading announcements from Firebase...');
-        db.ref('announcements').once('value')
-          .then((snapshot) => {
-            const announcementsList = document.getElementById('announcementsList');
-            const announcements = [];
-            
-            // Load from Firebase first
-            snapshot.forEach((childSnapshot) => {
-              const announcement = childSnapshot.val();
-              // Check if announcement is not expired
-              if (!announcement.expiresAt || new Date() < new Date(announcement.expiresAt)) {
-                announcements.push({
-                  ...announcement,
-                  firebaseKey: childSnapshot.key
-                });
-              }
-            });
-            
-            // Add some default announcements if none exist
-            if (announcements.length === 0) {
-              const defaultAnnouncements = [
-                {
-                  id: 1,
-                  title: "Annual Alumni Reunion 2024",
-                  content: "Join us for our annual reunion on December 15th, 2025. Reconnect with old friends and make new memories!",
-                  postedAt: "2024-01-15T00:00:00.000Z",
-                  type: "event",
-                  posterName: "Alumni Committee"
-                },
-                {
-                  id: 2,
-                  title: "New Alumni Portal Features",
-                  content: "We've added new features to our alumni portal including dues management and birthday tracking. Explore and enjoy!",
-                  postedAt: "2025-01-10T00:00:00.000Z",
-                  type: "update",
-                  posterName: "System Administrator"
-                },
-                {
-                  id: 3,
-                  title: "Career Mentorship Program",
-                  content: "We're launching a new mentorship program connecting recent graduates with experienced alumni. Sign up to participate!",
-                  postedAt: "2025-01-05T00:00:00.000Z",
-                  type: "program",
-                  posterName: "Career Development Team"
-                }
-              ];
-              announcements.push(...defaultAnnouncements);
-            }
-            
-            console.log('Announcements loaded:', announcements.length, 'announcements');
-            
-            // Sort by newest first
-            announcements.sort((a, b) => new Date(b.postedAt) - new Date(a.postedAt));
-            
-            announcementsList.innerHTML = announcements.map(announcement => {
-              const postedDate = new Date(announcement.postedAt);
-              let daysLeft = '';
-              
-              if (announcement.expiresAt) {
-                const expiryDate = new Date(announcement.expiresAt);
-                const daysRemaining = Math.ceil((expiryDate - new Date()) / (24 * 60 * 60 * 1000));
-                daysLeft = daysRemaining > 0 ? `${daysRemaining} day${daysRemaining === 1 ? '' : 's'} left` : 'Expired';
-              }
-              
-              return `
-                <div class="card-hover bg-white rounded-2xl shadow-lg p-6">
-                  <div class="flex items-center space-x-4 mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center text-xl">
-                      ${announcement.type === 'event' ? '📅' : announcement.type === 'update' ? '🔄' : announcement.type === 'job' ? '💼' : announcement.type === 'congratulations' ? '🎉' : '📋'}
-                    </div>
-                    <div class="flex-1">
-                      <h3 class="text-xl font-bold text-gray-900">${announcement.title}</h3>
-                      <div class="flex justify-between items-center text-sm text-gray-500">
-                        <span>By ${announcement.posterName || 'Anonymous'}</span>
-                        <span>${postedDate.toLocaleDateString()}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="text-gray-600 leading-relaxed mb-4">${announcement.content}</p>
-                  ${announcement.contact ? `<p class="text-sm text-gray-500"><strong>Contact:</strong> ${announcement.contact}</p>` : ''}
-                  ${daysLeft ? `<p class="text-xs text-yellow-600 mt-2">${daysLeft}</p>` : ''}
-                </div>
-              `;
-            }).join('');
-          })
-          .catch((error) => {
-            console.error('Error loading announcements:', error);
-            document.getElementById('announcementsList').innerHTML = '<div class="col-span-full text-center py-12"><p class="text-red-500">Error loading announcements. Please refresh the page.</p></div>';
-          });
-      } catch (error) {
-        console.error('Error in loadAnnouncements:', error);
-      }
-    }
-
-    // Load achievements from Firebase - FIXED
-    function loadAchievements() {
-      try {
-        console.log('Loading achievements from Firebase...');
-        db.ref('alumniSubmissions').once('value')
-          .then((snapshot) => {
-            const achievementsList = document.getElementById('achievementsList');
-            const alumni = [];
-            
-            snapshot.forEach((childSnapshot) => {
-              const alumnus = childSnapshot.val();
-              if (alumnus.achievements && alumnus.achievements.trim()) {
-                alumni.push(alumnus);
-              }
-            });
-            
-            console.log('Achievements loaded:', alumni.length, 'alumni with achievements');
-            
-            if (alumni.length === 0) {
-              achievementsList.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-gray-500 text-lg">No achievements shared yet. Register to share your accomplishments!</p></div>';
-              return;
-            }
-            
-            achievementsList.innerHTML = alumni.map(alumnus => `
-              <div class="card-hover bg-white rounded-2xl shadow-lg p-6">
-                <div class="flex items-center space-x-4 mb-4">
-                  <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center text-white font-bold">
-                    ${alumnus.fullName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
-                  </div>
-                  <div class="flex-1">
-                    <h3 class="text-xl font-bold text-gray-900">${alumnus.fullName}</h3>
-                    <p class="text-gray-600">Class of ${alumnus.yearOfCompletion}</p>
-                  </div>
-                </div>
-                <p class="text-gray-700 mb-3"><strong>🏆 Achievement:</strong> ${alumnus.achievements}</p>
-                ${alumnus.occupation ? `<p class="text-gray-600"><strong>💼 Current Role:</strong> ${alumnus.occupation}${alumnus.company ? ` at ${alumnus.company}` : ''}</p>` : ''}
-              </div>
-            `).join('');
-          })
-          .catch((error) => {
-            console.error('Error loading achievements:', error);
-            document.getElementById('achievementsList').innerHTML = '<div class="col-span-full text-center py-12"><p class="text-red-500">Error loading achievements. Please refresh the page.</p></div>';
-          });
-      } catch (error) {
-        console.error('Error in loadAchievements:', error);
-      }
-    }    // Load alumni messages from Firebase - FIXED
-    function loadAlumniMessages() {
-      try {
-        console.log('Loading alumni messages from Firebase...');
-        db.ref('messages').once('value')
-          .then((snapshot) => {
-            const messagesList = document.getElementById('alumniMessagesList');
-            const messages = [];
-            
-            snapshot.forEach((childSnapshot) => {
-              const message = childSnapshot.val();
-              // Check if message is not expired
-              if (new Date() < new Date(message.expiresAt)) {
-                messages.push({
-                  ...message,
-                  firebaseKey: childSnapshot.key
-                });
-              }
-            });
-            
-            console.log('Alumni messages loaded:', messages.length, 'messages');
-            
-            if (messages.length === 0) {
-              messagesList.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-gray-500 text-lg">No messages posted yet. Be the first to share with the community!</p></div>';
-              return;
-            }
-            
-            // Sort by newest first
-            messages.sort((a, b) => new Date(b.postedAt) - new Date(a.postedAt));
-            
-            messagesList.innerHTML = messages.map(message => {
-              const postedDate = new Date(message.postedAt);
-              const expiryDate = new Date(message.expiresAt);
-              const daysLeft = Math.ceil((expiryDate - new Date()) / (24 * 60 * 60 * 1000));
-              const isExpiringSoon = daysLeft <= 2;
-              
-              return `
-                <div class="card-hover bg-white rounded-2xl shadow-lg p-6 ${isExpiringSoon ? 'border-2 border-yellow-400' : ''}">
-                  <div class="flex justify-between items-start mb-4">
-                    <div class="flex items-center space-x-2">
-                      <span class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                        ${getMessageTypeIcon(message.type)} ${getMessageTypeName(message.type)}
-                      </span>
-                      ${isExpiringSoon ? '<span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">⏰ Expires Soon</span>' : ''}
-                    </div>
-                    <div class="text-right text-sm text-gray-500">
-                      <div>${daysLeft} day${daysLeft === 1 ? '' : 's'} left</div>
-                      <div>${postedDate.toLocaleDateString()}</div>
-                    </div>
-                  </div>
-                  
-                  <h3 class="text-xl font-bold text-gray-900 mb-3">${message.title}</h3>
-                  <div class="text-gray-700 mb-4 leading-relaxed">${message.content}</div>
-                  
-                  <div class="flex justify-between items-center text-sm">
-                    <div class="text-gray-600">
-                      <strong>📝 Posted by:</strong> ${message.posterName}
-                    </div>
-                    ${message.contact ? `<div class="text-gray-600"><strong>📞 Contact:</strong> ${message.contact}</div>` : ''}
-                  </div>
-                </div>
-              `;
-            }).join('');
-          })
-          .catch((error) => {
-            console.error('Error loading messages:', error);
-            document.getElementById('alumniMessagesList').innerHTML = '<div class="col-span-full text-center py-12"><p class="text-red-500">Error loading messages. Please refresh the page.</p></div>';
-          });
-      } catch (error) {
-        console.error('Error in loadAlumniMessages:', error);
-      }
-    }
-
-    function getMessageTypeIcon(type) {
-      const icons = {
-        congratulations: '🎉',
-        event: '📅',
-        job: '💼',
-        general: '💬',
-        business: '🏢',
-        reunion: '🤝'
-      };
-      return icons[type] || '💬';
-    }
-
-    function getMessageTypeName(type) {
-      const names = {
-        congratulations: 'Congratulations',
-        event: 'Event',
-        job: 'Job Opening',
-        general: 'General',
-        business: 'Business',
-        reunion: 'Reunion'
-      };
-      return names[type] || 'General';
-    }
-
-    // Load dues history - FIXED
-    function loadMyDuesHistory() {
-      try {
-        console.log('Loading dues history from Firebase...');
-        Promise.all([
-          db.ref('pendingDues').once('value'),
-          db.ref('approvedDues').once('value')
-        ]).then(([pendingSnapshot, approvedSnapshot]) => {
-          const historyContainer = document.getElementById('myDuesHistory');
-          const allDues = [];
-          
-          pendingSnapshot.forEach((childSnapshot) => {
-            allDues.push({
-              ...childSnapshot.val(),
-              firebaseKey: childSnapshot.key
-            });
-          });
-          
-          approvedSnapshot.forEach((childSnapshot) => {
-            allDues.push({
-              ...childSnapshot.val(),
-              firebaseKey: childSnapshot.key
-            });
-          });
-          
-          console.log('Dues history loaded:', allDues.length, 'records');
-          
-          if (allDues.length === 0) {
-            historyContainer.innerHTML = '<div class="col-span-full text-center py-8"><p class="text-gray-500">No dues history found.</p></div>';
-            return;
-          }
-          
-          // Sort by submission date
-          allDues.sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
-          
-          historyContainer.innerHTML = allDues.map(dues => `
-            <div class="bg-white rounded-2xl shadow-lg p-6">
-              <div class="flex justify-between items-start mb-4">
-                <div>
-                  <h4 class="font-bold text-gray-900">₵${dues.amountPaid}</h4>
-                  <p class="text-gray-600">${dues.paymentMonth}</p>
-                </div>
-                <span class="px-3 py-1 rounded-full text-sm font-semibold ${
-                  dues.status === 'approved' 
-                    ? 'bg-green-100 text-green-800' 
-                    : dues.status === 'rejected' 
-                      ? 'bg-red-100 text-red-800'
-                      : 'bg-yellow-100 text-yellow-800'
-                }">
-                  ${dues.status === 'approved' ? '✅ Approved' : dues.status === 'rejected' ? '❌ Rejected' : '⏳ Pending'}
-                </span>
-              </div>
-              <div class="text-sm text-gray-600 space-y-1">
-                <p><strong>Method:</strong> ${getPaymentMethodName(dues.paymentMethod)}</p>
-                <p><strong>Reference:</strong> ${dues.referenceId}</p>
-                <p><strong>Submitted:</strong> ${new Date(dues.submittedAt).toLocaleDateString()}</p>
-                ${dues.approvedAt ? `<p><strong>Approved:</strong> ${new Date(dues.approvedAt).toLocaleDateString()}</p>` : ''}
-              </div>
-            </div>
-          `).join('');
-        }).catch((error) => {
-          console.error('Error loading dues history:', error);
-          document.getElementById('myDuesHistory').innerHTML = '<div class="col-span-full text-center py-8"><p class="text-red-500">Error loading dues history. Please refresh the page.</p></div>';
-        });
-      } catch (error) {
-        console.error('Error in loadMyDuesHistory:', error);
-      }
-    }
-
-    function getPaymentMethodName(method) {
-      const methods = {
-        momo: 'Mobile Money',
-        bank_transfer: 'Bank Transfer',
-        cash: 'Cash Payment',
-        other: 'Other'
-      };
-      return methods[method] || method;
-    }
-
-    // Update statistics - FIXED
-    function updateStats() {
-      try {
-        console.log('Updating statistics...');
-        Promise.all([
-          db.ref('alumniSubmissions').once('value'),
-          db.ref('gallery').once('value'),
-          db.ref('messages').once('value')
-        ]).then(([alumniSnapshot, gallerySnapshot, messagesSnapshot]) => {
-          const alumniCount = alumniSnapshot.numChildren();
-          const photosCount = gallerySnapshot.numChildren();
-          const messagesCount = messagesSnapshot.numChildren();
-          
-          // Update main page stats
-          document.getElementById('totalAlumni').textContent = alumniCount;
-          document.getElementById('totalPhotos').textContent = photosCount;
-          document.getElementById('totalMessages').textContent = messagesCount;
-          
-          console.log('Statistics updated:', { alumniCount, photosCount, messagesCount });
-        }).catch((error) => {
-          console.error('Error updating stats:', error);
-        });
-      } catch (error) {
-        console.error('Error in updateStats:', error);
-      }
-    }
-
-    // Cleanup expired messages - FIXED
-    function cleanupExpiredMessages() {
-      try {
-        console.log('Cleaning up expired messages...');
-        const cleanupPaths = ['messages', 'announcements'];
-        
-        cleanupPaths.forEach(path => {
-          db.ref(path).once('value')
-            .then((snapshot) => {
-              const now = new Date();
-              const toDelete = [];
-              
-              snapshot.forEach((childSnapshot) => {
-                const message = childSnapshot.val();
-                if (message.expiresAt && new Date(message.expiresAt) <= now) {
-                  toDelete.push(childSnapshot.key);
-                }
-              });
-              
-              // Delete expired messages
-              toDelete.forEach(key => {
-                db.ref(`${path}/${key}`).remove();
-              });
-              
-              if (toDelete.length > 0) {
-                console.log(`Cleaned up ${toDelete.length} expired items from ${path}`);
-                if (path === 'messages') loadAlumniMessages();
-                if (path === 'announcements') loadAnnouncements();
-                updateStats();
-              }
-            })
-            .catch((error) => {
-              console.error(`Error cleaning up ${path}:`, error);
-            });
-        });
-      } catch (error) {
-        console.error('Error in cleanupExpiredMessages:', error);
-      }
-    }
-
-    // Admin data loading - FIXED
-    function loadAdminData() {
-      try {
-        console.log('Loading admin data...');
-        loadAlumniManagement();
-      } catch (error) {
-        console.error('Error loading admin data:', error);
-      }
-    }
-
-    function loadAlumniManagement() {
-      try {
-        console.log('Loading alumni management data...');
-        db.ref('alumniSubmissions').once('value')
-          .then((snapshot) => {
-            allAlumni = [];
-            snapshot.forEach((childSnapshot) => {
-              allAlumni.push({
-                ...childSnapshot.val(),
-                firebaseKey: childSnapshot.key
-              });
-            });
-            
-            displayAlumniData(allAlumni);
-            document.getElementById('alumniCount').textContent = `${allAlumni.length} alumni`;
-            console.log('Alumni management data loaded:', allAlumni.length, 'alumni');
-          })
-          .catch((error) => {
-            console.error('Error loading alumni data:', error);
-          });
-      } catch (error) {
-        console.error('Error in loadAlumniManagement:', error);
-      }
-    }
-
-    function displayAlumniData(alumni) {
-      try {
-        const tbody = document.getElementById('alumniTableBody');
-        
-        if (alumni.length === 0) {
-          tbody.innerHTML = '<tr><td colspan="9" class="text-center py-8 text-gray-500">No alumni data found.</td></tr>';
-          return;
-        }
-        
-        tbody.innerHTML = alumni.map(alumnus => `
-          <tr class="hover:bg-gray-50">
-            <td class="font-semibold">${alumnus.fullName}</td>
-            <td>${alumnus.email}</td>
-            <td>${alumnus.phone}</td>
-            <td>${alumnus.yearOfCompletion}</td>
-            <td>${alumnus.currentLocation}</td>
-            <td>${alumnus.occupation || '-'}</td>
-            <td>${alumnus.company || '-'}</td>
-            <td>${new Date(alumnus.submittedAt).toLocaleDateString()}</td>
-            <td>
-              <button onclick="viewAlumniDetails('${alumnus.firebaseKey}')" 
-                      class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm">
-                View
-              </button>
-            </td>
-          </tr>
-        `).join('');
-      } catch (error) {
-        console.error('Error displaying alumni data:', error);
-      }
-    }
-
-    function loadPendingDues() {
-      try {
-        console.log('Loading pending dues...');
-        db.ref('pendingDues').once('value')
-          .then((snapshot) => {
-            allPendingDues = [];
-            snapshot.forEach((childSnapshot) => {
-              allPendingDues.push({
-                ...childSnapshot.val(),
-                firebaseKey: childSnapshot.key
-              });
-            });
-            
-            displayPendingDues(allPendingDues);
-            document.getElementById('pendingCount').textContent = `${allPendingDues.length} pending`;
-            console.log('Pending dues loaded:', allPendingDues.length, 'pending');
-          })
-          .catch((error) => {
-            console.error('Error loading pending dues:', error);
-          });
-      } catch (error) {
-        console.error('Error in loadPendingDues:', error);
-      }
-    }
-
-    function displayPendingDues(dues) {
-      try {
-        const container = document.getElementById('pendingDuesContainer');
-        
-        if (dues.length === 0) {
-          container.innerHTML = '<div class="text-center py-8 text-gray-500">No pending dues submissions.</div>';
-          return;
-        }
-        
-        container.innerHTML = dues.map(due => `
-          <div class="bg-gray-50 rounded-2xl p-6">
-            <div class="flex flex-col sm:flex-row justify-between items-start mb-4 gap-4">
-              <div>
-                <h3 class="text-lg font-bold text-gray-900">${due.fullName}</h3>
-                <p class="text-gray-600">${due.memberIdEmail}</p>
-              </div>
-              <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
-                ⏳ Pending
-              </span>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <div>
-                <p><strong>Amount:</strong> ₵${due.amountPaid}</p>
-                <p><strong>Year Group:</strong> ${due.yearGroup}</p>
-                <p><strong>Payment Method:</strong> ${getPaymentMethodName(due.paymentMethod)}</p>
-              </div>
-              <div>
-                <p><strong>Reference ID:</strong> ${due.referenceId}</p>
-                <p><strong>Month/Term:</strong> ${due.paymentMonth}</p>
-                <p><strong>Submitted:</strong> ${new Date(due.submittedAt).toLocaleDateString()}</p>
-              </div>
-            </div>
-            
-            ${due.paymentNote ? `<div class="mb-4"><strong>Note:</strong> ${due.paymentNote}</div>` : ''}
-            
-            <div class="flex flex-wrap gap-2">
-              <button onclick="approveDues('${due.firebaseKey}')" 
-                      class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl transition-colors">
-                ✅ Approve
-              </button>
-              <button onclick="rejectDues('${due.firebaseKey}')" 
-                      class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl transition-colors">
-                ❌ Reject
-              </button>
-              ${due.paymentProof ? `<button onclick="viewPaymentProof('${due.firebaseKey}')" 
-                      class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl transition-colors">
-                📄 View Proof
-              </button>` : ''}
-            </div>
-          </div>
-        `).join('');
-      } catch (error) {
-        console.error('Error displaying pending dues:', error);
-      }
-    }
-
-    function loadApprovedDues() {
-      try {
-        console.log('Loading approved dues...');
-        db.ref('approvedDues').once('value')
-          .then((snapshot) => {
-            allApprovedDues = [];
-            snapshot.forEach((childSnapshot) => {
-              allApprovedDues.push({
-                ...childSnapshot.val(),
-                firebaseKey: childSnapshot.key
-              });
-            });
-            
-            displayApprovedDues(allApprovedDues);
-            document.getElementById('approvedCount').textContent = `${allApprovedDues.length} approved`;
-            console.log('Approved dues loaded:', allApprovedDues.length, 'approved');
-          })
-          .catch((error) => {
-            console.error('Error loading approved dues:', error);
-          });
-      } catch (error) {
-        console.error('Error in loadApprovedDues:', error);
-      }
-    }
-
-    function displayApprovedDues(dues) {
-      try {
-        const tbody = document.getElementById('approvedDuesTableBody');
-        
-        if (dues.length === 0) {
-          tbody.innerHTML = '<tr><td colspan="7" class="text-center py-8 text-gray-500">No approved dues found.</td></tr>';
-          return;
-        }
-        
-        tbody.innerHTML = dues.map(due => `
-          <tr class="hover:bg-gray-50">
-            <td class="font-semibold">${due.fullName}</td>
-            <td>₵${due.amountPaid}</td>
-            <td>${getPaymentMethodName(due.paymentMethod)}</td>
-            <td>${due.referenceId}</td>
-            <td>${due.paymentMonth}</td>
-            <td>${new Date(due.approvedAt).toLocaleDateString()}</td>
-            <td>
-              <button onclick="viewDuesDetails('${due.firebaseKey}')" 
-                      class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm">
-                View
-              </button>
-            </td>
-          </tr>
-        `).join('');
-      } catch (error) {
-        console.error('Error displaying approved dues:', error);
-      }
-    }
-
-    function loadAnalytics() {
-      try {
-        console.log('Loading analytics...');
-        Promise.all([
-          db.ref('alumniSubmissions').once('value'),
-          db.ref('approvedDues').once('value'),
-          db.ref('pendingDues').once('value')
-        ]).then(([alumniSnapshot, approvedSnapshot, pendingSnapshot]) => {
-          const alumniCount = alumniSnapshot.numChildren();
-          let totalRevenue = 0;
-          let thisMonthRevenue = 0;
-          const currentMonth = new Date().getMonth();
-          const currentYear = new Date().getFullYear();
-          
-          approvedSnapshot.forEach((childSnapshot) => {
-            const due = childSnapshot.val();
-            totalRevenue += parseFloat(due.amountPaid);
-            
-            const approvedDate = new Date(due.approvedAt);
-            if (approvedDate.getMonth() === currentMonth && approvedDate.getFullYear() === currentYear) {
-              thisMonthRevenue += parseFloat(due.amountPaid);
-            }
-          });
-          
-          const pendingCount = pendingSnapshot.numChildren();
-          
-          // Update analytics display
-          document.getElementById('analyticsAlumniCount').textContent = alumniCount;
-          document.getElementById('analyticsTotalRevenue').textContent = `₵${totalRevenue.toLocaleString()}`;
-          document.getElementById('analyticsPendingCount').textContent = pendingCount;
-          document.getElementById('analyticsThisMonth').textContent = `₵${thisMonthRevenue.toLocaleString()}`;
-          
-          // Load recent activity
-          loadRecentActivity();
-          
-          console.log('Analytics loaded:', { alumniCount, totalRevenue, pendingCount, thisMonthRevenue });
-        }).catch((error) => {
-          console.error('Error loading analytics:', error);
-        });
-      } catch (error) {
-        console.error('Error in loadAnalytics:', error);
-      }
-    }
-
-    function loadRecentActivity() {
-      try {
-        const container = document.getElementById('recentActivity');
-        container.innerHTML = `
-          <div class="space-y-4">
-            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
-              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <span class="text-green-600">👥</span>
-              </div>
-              <div>
-                <p class="font-semibold text-gray-900">New Alumni Registration</p>
-                <p class="text-sm text-gray-600">Recent registrations are being processed</p>
-              </div>
-            </div>
-            
-            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
-              <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
-                <span class="text-yellow-600">💰</span>
-              </div>
-              <div>
-                <p class="font-semibold text-gray-900">Dues Submissions</p>
-                <p class="text-sm text-gray-600">Several dues are pending approval</p>
-              </div>
-            </div>
-            
-            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
-              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <span class="text-blue-600">📱</span>
-              </div>
-              <div>
-                <p class="font-semibold text-gray-900">System Activity</p>
-                <p class="text-sm text-gray-600">Platform is running smoothly</p>
-              </div>
-            </div>
-          </div>
-        `;
-      } catch (error) {
-        console.error('Error loading recent activity:', error);
-      }
-    }    // Admin actions - FIXED
-    function approveDues(firebaseKey) {
-      if (!confirm('Are you sure you want to approve this dues submission?')) {
+      <div class="glass-card rounded-xl p-4 text-center">
+        <div class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+          </svg>
+        </div>
+        <h4 class="font-medium text-green-50">Opportunities</h4>
+        <p class="text-sm text-green-200 mt-1">Career and mentorship</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center">
+      <p class="text-green-200 text-sm">
+        Have questions? We're here to help at 
+        <a href="mailto:edwinaduboateng2@gmail.com" class="text-yellow-400 hover:text-yellow-300 transition-colors">
+          edwinaduboateng2@gmail.com
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Enhanced Countdown Timer
+    const countdownElement = document.getElementById("countdown");
+    const targetDate = new Date("2025-07-15T00:00:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        countdownElement.innerHTML = '<span class="text-green-300">We\'re Live!</span>';
         return;
       }
-      
-      try {
-        console.log('Approving dues:', firebaseKey);
-        
-        // Get the dues data from pending
-        db.ref(`pendingDues/${firebaseKey}`).once('value')
-          .then((snapshot) => {
-            const duesData = snapshot.val();
-            if (duesData) {
-              // Add approval data
-              duesData.status = 'approved';
-              duesData.approvedAt = new Date().toISOString();
-              
-              // Move to approved dues
-              return db.ref('approvedDues').push(duesData);
-            }
-          })
-          .then(() => {
-            // Remove from pending dues
-            return db.ref(`pendingDues/${firebaseKey}`).remove();
-          })
-          .then(() => {
-            console.log('Dues approved successfully');
-            showSuccessMessage('Dues approved successfully!');
-            loadPendingDues();
-            loadApprovedDues();
-            loadAnalytics();
-          })
-          .catch((error) => {
-            console.error('Error approving dues:', error);
-            alert('Error approving dues. Please try again.');
-          });
-      } catch (error) {
-        console.error('Error in approveDues:', error);
-        alert('Error approving dues. Please try again.');
-      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdownElement.innerHTML = `
+        <div class="flex justify-center space-x-4 text-center">
+          <div><div class="text-2xl font-bold">${days}</div><div class="text-xs text-green-200">days</div></div>
+          <div><div class="text-2xl font-bold">${hours}</div><div class="text-xs text-green-200">hours</div></div>
+          <div><div class="text-2xl font-bold">${minutes}</div><div class="text-xs text-green-200">mins</div></div>
+          <div><div class="text-2xl font-bold">${seconds}</div><div class="text-xs text-green-200">secs</div></div>
+        </div>
+      `;
     }
 
-    function rejectDues(firebaseKey) {
-      if (!confirm('Are you sure you want to reject this dues submission?')) {
-        return;
-      }
-      
-      try {
-        console.log('Rejecting dues:', firebaseKey);
-        
-        db.ref(`pendingDues/${firebaseKey}`).remove()
-          .then(() => {
-            console.log('Dues rejected successfully');
-            showSuccessMessage('Dues rejected and removed.');
-            loadPendingDues();
-            loadAnalytics();
-          })
-          .catch((error) => {
-            console.error('Error rejecting dues:', error);
-            alert('Error rejecting dues. Please try again.');
-          });
-      } catch (error) {
-        console.error('Error in rejectDues:', error);
-        alert('Error rejecting dues. Please try again.');
-      }
-    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 
-    function viewPaymentProof(firebaseKey) {
-      try {
-        console.log('Viewing payment proof:', firebaseKey);
-        
-        db.ref(`pendingDues/${firebaseKey}`).once('value')
-          .then((snapshot) => {
-            const duesData = snapshot.val();
-            if (duesData && duesData.paymentProof) {
-              document.getElementById('proofDetails').innerHTML = `
-                <p><strong>Submitted by:</strong> ${duesData.fullName}</p>
-                <p><strong>Amount:</strong> ₵${duesData.amountPaid}</p>
-                <p><strong>Reference:</strong> ${duesData.referenceId}</p>
-              `;
-              
-              if (duesData.paymentProof.startsWith('data:image')) {
-                document.getElementById('proofContent').innerHTML = `
-                  <img src="${duesData.paymentProof}" alt="Payment Proof" class="max-w-full max-h-96 mx-auto rounded-lg shadow-lg">
-                `;
-              } else {
-                document.getElementById('proofContent').innerHTML = `
-                  <p class="text-gray-600">File: ${duesData.proofFileName || 'Unknown file'}</p>
-                  <a href="${duesData.paymentProof}" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded mt-2">
-                    Open File
-                  </a>
-                `;
-              }
-              
-              showModal('viewProofModal');
-            }
-          })
-          .catch((error) => {
-            console.error('Error viewing payment proof:', error);
-            alert('Error loading payment proof.');
-          });
-      } catch (error) {
-        console.error('Error in viewPaymentProof:', error);
-        alert('Error viewing payment proof.');
-      }
-    }
+    // Enhanced Form Submission
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const button = form.querySelector("button");
+      const originalText = button.innerHTML;
 
-    function viewAlumniDetails(firebaseKey) {
-      try {
-        const alumnus = allAlumni.find(a => a.firebaseKey === firebaseKey);
-        if (alumnus) {
-          alert(`
-Alumni Details:
-Name: ${alumnus.fullName}
-Email: ${alumnus.email}
-Phone: ${alumnus.phone}
-Year: ${alumnus.yearOfCompletion}
-Location: ${alumnus.currentLocation}
-Occupation: ${alumnus.occupation || 'Not specified'}
-Company: ${alumnus.company || 'Not specified'}
-Achievements: ${alumnus.achievements || 'None specified'}
-Message: ${alumnus.groupMessage || 'No message'}
-Joined: ${new Date(alumnus.submittedAt).toLocaleDateString()}
-          `);
-        }
-      } catch (error) {
-        console.error('Error viewing alumni details:', error);
-      }
-    }
+      button.innerHTML = `
+        <div class="flex items-center justify-center">
+          <svg class="animate-spin -ml-1 mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Sending...
+        </div>
+      `;
+      button.disabled = true;
 
-    function viewDuesDetails(firebaseKey) {
-      try {
-        const dues = allApprovedDues.find(d => d.firebaseKey === firebaseKey);
-        if (dues) {
-          alert(`
-Dues Details:
-Name: ${dues.fullName}
-Amount: ₵${dues.amountPaid}
-Method: ${getPaymentMethodName(dues.paymentMethod)}
-Reference: ${dues.referenceId}
-Month/Term: ${dues.paymentMonth}
-Submitted: ${new Date(dues.submittedAt).toLocaleDateString()}
-Approved: ${new Date(dues.approvedAt).toLocaleDateString()}
-Note: ${dues.paymentNote || 'No note'}
-          `);
-        }
-      } catch (error) {
-        console.error('Error viewing dues details:', error);
-      }
-    }
-
-    // Filtering functions - FIXED
-    function filterAlumniData() {
-      try {
-        const searchTerm = document.getElementById('alumniSearchInput').value.toLowerCase();
-        const filtered = allAlumni.filter(alumnus => 
-          alumnus.fullName.toLowerCase().includes(searchTerm) ||
-          alumnus.email.toLowerCase().includes(searchTerm) ||
-          alumnus.phone.includes(searchTerm) ||
-          alumnus.yearOfCompletion.toString().includes(searchTerm) ||
-          alumnus.currentLocation.toLowerCase().includes(searchTerm)
-        );
-        displayAlumniData(filtered);
-        document.getElementById('alumniCount').textContent = `${filtered.length} alumni`;
-      } catch (error) {
-        console.error('Error filtering alumni data:', error);
-      }
-    }
-
-    function filterApprovedDues() {
-      try {
-        const searchTerm = document.getElementById('approvedDuesSearchInput').value.toLowerCase();
-        const filtered = allApprovedDues.filter(dues => 
-          dues.fullName.toLowerCase().includes(searchTerm) ||
-          dues.referenceId.toLowerCase().includes(searchTerm) ||
-          dues.paymentMonth.toLowerCase().includes(searchTerm)
-        );
-        displayApprovedDues(filtered);
-        document.getElementById('approvedCount').textContent = `${filtered.length} approved`;
-      } catch (error) {
-        console.error('Error filtering approved dues:', error);
-      }
-    }
-
-    // Export functionality - FIXED
-    function exportData() {
-      try {
-        console.log('Exporting data...');
-        const data = {
-          alumni: allAlumni,
-          approvedDues: allApprovedDues,
-          pendingDues: allPendingDues,
-          exportedAt: new Date().toISOString()
-        };
-        
-        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `great-faith-alumni-export-${new Date().toISOString().split('T')[0]}.json`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        
-        console.log('Data exported successfully');
-      } catch (error) {
-        console.error('Error exporting data:', error);
-        alert('Error exporting data. Please try again.');
-      }
-    }
-
-    // Reset file input labels
-    function resetFileInputLabels() {
-      try {
-        const labels = [
-          { selector: 'label[for="profilePhoto"] span', text: '📷 Choose Photo' },
-          { selector: 'label[for="resumeUpload"] span', text: '📄 Choose Resume' },
-          { selector: 'label[for="paymentProof"] span', text: '📄 Choose File' },
-          { selector: 'label[for="galleryPhoto"] span', text: '📷 Choose Photo' }
-        ];
-
-        labels.forEach(({ selector, text }) => {
-          const element = document.querySelector(selector);
-          if (element) {
-            element.textContent = text;
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(response => {
+          if (response.ok) {
+            document.getElementById("success-message").classList.remove("hidden");
+            form.reset();
+            setTimeout(() => {
+              document.getElementById("success-message").classList.add("hidden");
+            }, 5000);
+          } else {
+            throw new Error("Network response was not ok");
           }
+        })
+        .catch(() => {
+          alert("Something went wrong. Please try again later.");
+        })
+        .finally(() => {
+          button.innerHTML = originalText;
+          button.disabled = false;
         });
-      } catch (error) {
-        console.error('Error resetting file input labels:', error);
-      }
-    }
-
-    // Error handling for Firebase connection
-    window.addEventListener('error', function(e) {
-      if (e.error && e.error.message && e.error.message.includes('Firebase')) {
-        console.error('Firebase connection error:', e.error);
-        alert('Connection to database failed. Please check your internet connection and refresh the page.');
-      }
     });
 
-    // Test Firebase connection on load
-    setTimeout(() => {
-      try {
-        db.ref('.info/connected').once('value')
-          .then((snapshot) => {
-            if (snapshot.val() === true) {
-              console.log('✅ Firebase connected successfully');
-            } else {
-              console.warn('⚠️ Firebase connection uncertain');
-            }
-          })
-          .catch((error) => {
-            console.error('❌ Firebase connection failed:', error);
-            alert('Database connection failed. Please check your internet connection and refresh the page.');
-          });
-      } catch (error) {
-        console.error('Error testing Firebase connection:', error);
-      }
-    }, 2000);
+    // Floating Elements Animation
+    const floatingContainer = document.getElementById("floatingElements");
+    
+    function createFloatingElement() {
+      const element = document.createElement("div");
+      element.classList.add("floating-element");
+      
+      const size = Math.random() * 6 + 4; // 4-10px
+      element.style.width = size + "px";
+      element.style.height = size + "px";
+      element.style.left = Math.random() * 100 + "vw";
+      element.style.animationDuration = (Math.random() * 10 + 15) + "s";
+      element.style.animationDelay = Math.random() * 2 + "s";
+      
+      floatingContainer.appendChild(element);
+      
+      setTimeout(() => {
+        if (element.parentNode) {
+          element.remove();
+        }
+      }, 25000);
+    }
 
-    console.log('🎉 Great Faith Alumni Network script loaded successfully');
+    // Create floating elements periodically
+    setInterval(createFloatingElement, 800);
+    
+    // Create initial batch
+    for (let i = 0; i < 8; i++) {
+      setTimeout(createFloatingElement, i * 200);
+    }
+
+    
   </script>
 </body>
 </html>
